@@ -2,7 +2,7 @@ baseurl = "http://jhirniak.github.io/"
 languageCode = "en-us"
 title = "Jaroslaw Hirniak's Pirate Parrot"
 theme = "hugo-steam-theme"
-paginate = 40
+paginate = 10
 
 [params]
 
@@ -13,7 +13,7 @@ paginate = 40
 	# You can choose between green, orange, red and blue.
 	themeColor = "orange"
 	# Enable Google Analytics be inserting your tracking code
-	googleAnalytics = ""
+	googleAnalytics = "UA-69845424-1"
 
 	# To provide some metadata for search engines and the about section in the footer
 	# feel free to add a few information about you and your website.
