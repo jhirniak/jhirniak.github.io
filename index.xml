@@ -24,6 +24,7 @@
 &lt;li&gt;&lt;a href=&#34;http://karpathy.github.io/neuralnets/&#34;&gt;Andrej Karpathy: Hacker&amp;rsquo;s guide to Neural Networks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://youtu.be/AyzOUbkUf3M&#34;&gt;Geoffrey Hinton (the father of NN) Google Tech Talk about The Next Generation of Neural Networks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/0BxKBnD5y2M8NbWN6XzM5UXkwNDA/view&#34;&gt;Yann LeCun: Obstacles on the path to AI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html&#34;&gt;What is the class of this image? Article comparing the current state of the cart algorithms in object classification.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;articles-and-motivation-for-studying-neural-networks:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Articles and motivation for studying Neural Networks&lt;/h2&gt;
@@ -39,24 +40,146 @@
 &lt;li&gt;&lt;a href=&#34;http://uk.businessinsider.com/myths-misconceptions-about-artificial-intelligence-2015-9?r=US&amp;amp;IR=T&#34;&gt;19 A.I. experts reveal the biggest myths about robots&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://phys.org/news/2015-10-human-intuition-algorithms-outperforms-teams.html&#34;&gt;System that replaces human intuition with algorithms outperforms human teams&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://techcrunch.com/2015/10/13/facebooks-working-on-a-tool-to-help-the-blind-see-images/#.wqgozt:NWyq&#34;&gt;Facebook’s Working On A Tool To Help The Blind “See” Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.kaggle.com/2015/01/02/cifar-10-competition-winners-interviews-with-dr-ben-graham-phil-culliton-zygmunt-zajac/&#34;&gt;CIFAR-10 Competition Winners: Interviews with Dr. Ben Graham, Phil Culliton, &amp;amp; Zygmunt Zając&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;convnets:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;ConvNets&lt;/h3&gt;
+&lt;h3 id=&#34;convnets-articles:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;ConvNets Articles&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://code.facebook.com/posts/1478523512478471/teaching-machines-to-see-and-understand-advances-in-ai-research/&#34;&gt;Teaching machines to see and understand: Advances in AI research
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;convnets-1:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;ConvNets&lt;/h2&gt;
+&lt;h2 id=&#34;convnets:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;ConvNets&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://cs.stanford.edu/people/karpathy/convnetjs/&#34;&gt;Andrej Karpathy: ConvNetJS - Deep Learning in your browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs231n.github.io/convolutional-networks/&#34;&gt;CS231n Convolutional Neural Networks for Visual Recognition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs231n.github.io/&#34;&gt;CS231n Whole Course on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;advanced:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Advanced&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.toronto.edu/~kriz/index.html&#34;&gt;Alex Krizhevsky NN homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.toronto.edu/~kriz/conv-cifar10-aug2010.pdf&#34;&gt;Alex Krizhevsky: Convolutional Deep Belief Networks on CIFAR-10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2005_512.pdf&#34;&gt;2005. G. Hinton and V. Nair. Inferring Motor Programs from Images of Handwritten Digits.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;backprop:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;BackProp&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.researchgate.net/file.PostFileLoader.html?id=5617d6e2614325cd958b45f9&amp;amp;assetKey=AS%3A282660464283650%401444402914706&amp;amp;usg=AFQjCNGlW-fjs6vqQ5p-GkZWEyc1nHguNQ&amp;amp;sig2=JFoERw-KFpeS22Wv0HkDlQ&#34;&gt;1998. Y. LeCun, L. Bottou, G. Orr, K. Muller. Efficient BackProp.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;deep-learning:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Deep Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://deeplearning.net/&#34;&gt;DeepLearning.Net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://deeplearning.net/tutorial/deeplearning.pdf&#34;&gt;Deep Learning Tutorial 0.1. LISA lab.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;books:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Books&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://research.microsoft.com/pubs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf&#34;&gt;L. Deng and D. Yu. Deep Learning - Methods and Applications.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;deep-belief-networks:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Deep Belief Networks&lt;/h2&gt;
+
+&lt;h3 id=&#34;slides:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Slides&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://on-demand.gputechconf.com/gtc/2015/presentation/S5722-Umar-Arshad.pdf&#34;&gt;Deep Belief Networks by U. Arshad and Arrayfire&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;deep-structured-learning:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Deep-Structured Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://research.microsoft.com/pubs/155609/DENG-APSIPA.pdf&#34;&gt;2011. L. Deng. An Overview of Deep-Structured Learning for Information Processing.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;restricted-boltzmann-machines-rbms:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Restricted Boltzmann Machines (RBMs)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf&#34;&gt;April 2009. Alex Krizhevsky. Learning Multiple Layers of Features from Tiny Images.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://meseec.ce.rit.edu/756-projects/fall2014/3-2.pdf&#34;&gt;Restricted Boltzmann Machines on Multi-Core Processors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;natural-language-processing-nlp:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Natural Language Processing (NLP)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.aclweb.org/anthology/S14-2033&#34;&gt;2014. D. Tang, F. Wei, B. Qi, T. Liu, M. Zhou. Coooolll: A Deep Learning System for Twitter Sentiment Classification∗&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://arxiv.org/pdf/1404.2188v1&#34;&gt;2014. A Convolutional Neural Network for Modelling Sentences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf&#34;&gt;2011. R. Collobert, J. Weston, L. Bottou M. Karlen, K. Kavukcuoglu, P. Kuksa. Natural Language Processing (Almost) from Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ronan.collobert.com/pub/matos/2008_nlp_icml.pdf&#34;&gt;2008. R. Collbert, J. Weston. A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.toronto.edu/~fritz/absps/waibelTDNN.pdf&#34;&gt;1989! A. Waibel, T. Hanazawa, G. Hinton, K. Shikano, K. Lang. Phoneme Recognition using Time-Delay Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;homepages:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Homepages&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scholar.google.co.uk/citations?user=XrKLUO0AAAAJ&amp;amp;hl=en&#34;&gt;Misha Denil&amp;rsquo;s publications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mdenil.com/projects/&#34;&gt;Misha Denil&amp;rsquo;s projects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;proceedings:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Proceedings&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://papers.nips.cc/book/advances-in-neural-information-processing-systems-25-2012&#34;&gt;NIPS 2012&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;tools:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Tools&lt;/h2&gt;
 
 &lt;h3 id=&#34;torch:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Torch&lt;/h3&gt;
+
+&lt;h4 id=&#34;basics:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Basics&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://torch.ch/docs/getting-started.html#&#34;&gt;Torch Installation&lt;/a&gt;
+in short&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# install dependencies
+curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
+
+# Clone with dependencies into desired directory
+git clone https://github.com/torch/distro.git /opt/torch --recursive
+
+# cd the install directory and run installation script
+cd /opt/torch &amp;amp;&amp;amp; ./install.sh
+
+# Update current session
+source ~/.bashrc
+
+# Run Torch REPL
+th
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/torch/torch7/wiki/Cheatsheet&#34;&gt;Torch Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/torch/torch7/wiki/Torch-for-Numpy-users&#34;&gt;Torch reference for numpy users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://atamahjoubfar.github.io/Torch_for_Matlab_users.pdf&#34;&gt;Torch reference for Matlab users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tylerneylon.com/a/learn-lua/&#34;&gt;Lua in 15 minutes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/torch/torch7/wiki/Cheatsheet#tutorials-demos-by-category&#34;&gt;Torch Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;articles:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Articles&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://fastml.com/torch-vs-theano/&#34;&gt;Torch vs Theano comparison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stats.stackexchange.com/questions/162376/what-are-key-differences-between-theano-python-and-torch-lua-for-deep-learni&#34;&gt;Torch vs Theano in a context of deep learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fastml.com/loading-data-in-torch-is-a-mess/&#34;&gt;Loading data in Torch (is a mess)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;slides-1:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Slides&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://hunch.net/~nyoml/torch7.pdf&#34;&gt;Torch7 - scientific computing for Lua(JIT)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://learning.cs.toronto.edu/wp-content/uploads/2015/02/torch_tutorial.pdf&#34;&gt;Deep learning with Torch - the good, the bad, the ugly since 2002.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;advanced-1:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Advanced&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/twitter/torch-autograd&#34;&gt;Torch Autograd by Twitter for automatically differentiating native Torch code&lt;/a&gt;&lt;/li&gt;
@@ -66,6 +189,12 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/google/deepdream/blob/master/dream.ipynb&#34;&gt;Deep Dreams (with Caffe) - neural network that produces &amp;ldquo;dream&amp;rdquo; visuals&lt;/a&gt; &lt;a href=&#34;http://googleresearch.blogspot.ch/2015/06/inceptionism-going-deeper-into-neural.html&#34;&gt;show here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;datasets:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Datasets&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.toronto.edu/~kriz/cifar.html&#34;&gt;CIFAR-10&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
