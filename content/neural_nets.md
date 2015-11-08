@@ -1,7 +1,7 @@
 +++
 date = "2015-11-08T02:46:58Z"
 title = "Neural Nets"
-
+menu = "main"
 +++
 
 ## Resources for learning about Neural Networks
