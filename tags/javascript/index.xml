@@ -116,7 +116,35 @@ $(function () {
 
 &lt;h2 id=&#34;demo:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Demo&lt;/h2&gt;
 
-&lt;p&gt;I took this demo from my [about page](&lt;/p&gt;
+&lt;p&gt;I took this demo from my &lt;a href=&#34;http://jhirniak.github.io/about/&#34;&gt;about page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The best way to contact me is via email &lt;a id=&#34;mm&#34; href=&#34;mailto:nospam@thanks.com&#34;&gt;click to reveal (JS required)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script type=&#39;text/javascript&#39;&gt;
+$(function () {
+  var decodedTextField = $(&#34;#decoded&#34;);
+  var encodedTextField = $(&#34;#encoded&#34;);
+
+  decodedTextFieldd.on(&#39;input&#39;, function () {
+    alert(&#39;typed&#39;);
+    encodedTextField.text(btoa(decodedTextField.text()));
+  });
+
+  encodedTextField.on(&#39;input&#39;, function () {
+    decodedTextField.text(atob(encodedTextField.text()));
+  });
+
+
+  $(&#34;a#mm&#34;).click(function (e) {
+    console.log(&#39;Fired&#39;);
+    var secret = function () { return atob(&#39;akBoaXJuaWFrLmluZm8=&#39;) };
+    $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
+    $(this).text(secret());
+    $(this).off(&#34;click&#34;);
+    e.preventDefault();
+  });
+});
+&lt;/script&gt;
 </description>
     </item>
     
