@@ -19,19 +19,18 @@
 
 &lt;h2 id=&#34;requirements:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Requirements&lt;/h2&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;jQuery:
+&lt;ul&gt;
+&lt;li&gt;jQuery:&lt;/li&gt;
+&lt;/ul&gt;
 
-For this tutorial we will need jQuery, which you can get from [jQuery CDN](https://code.jquery.com/). We will use the latest and minified jQuery from [https://code.jquery.com/jquery-2.1.4.min.js](https://code.jquery.com/jquery-2.1.4.min.js):
+&lt;p&gt;For this tutorial we will need jQuery, which you can get from &lt;a href=&#34;https://code.jquery.com/&#34;&gt;jQuery CDN&lt;/a&gt;. We will use the latest and minified jQuery from &lt;a href=&#34;https://code.jquery.com/jquery-2.1.4.min.js&#34;&gt;https://code.jquery.com/jquery-2.1.4.min.js&lt;/a&gt;:&lt;/p&gt;
 
-```html
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://code.jquery.com/jquery-2.1.4.min.js&#34;&gt;&lt;/script&gt;
-```
-  &lt;/li&gt;
-  &lt;li&gt;
-This trick will only work on browsers with enabled JavaScript and it is estimated that [about 1% of Internet users will have not](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). So, this trick may not work for everyone. For me it is fine because of my target audience.
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://code.jquery.com/jquery-2.1.4.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This trick will only work on browsers with enabled JavaScript and it is estimated that &lt;a href=&#34;https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/&#34;&gt;about 1% of Internet users will have not&lt;/a&gt;. So, this trick may not work for everyone. For me it is fine because of my target audience.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;the-nuts-and-bolts:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;The nuts and bolts&lt;/h2&gt;
 
