@@ -4,9 +4,9 @@ draft = true
 title = "Hosting Hugo on GitHub Pages: Workflow"
 
 +++
-1. [Hosting personal/organizational page in one repo](#hosting-personal-organizational-page-in-one-repo)
-2. [Hosting personal/organizational page in two repos](#hosting-personal-organizational-page-in-two-repos)
-3. [Hosting project page](#hosting-project-page)
+1. [Hosting personal/organizational page in one repo]({{< relref "##hosting-personal-organizational-page-in-one-repo" >}})
+2. [Hosting personal/organizational page in two repos]({{< relref "#hosting-personal-organizational-page-in-two-repos" >}})
+3. [Hosting project page]({{< relref "#hosting-project-page" >}})
 
 
 ## Hosting Hugo on GitHub pages: workflow
