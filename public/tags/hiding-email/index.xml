@@ -61,8 +61,8 @@ btoa(&#39;your@email.address&#39;)
 
 &lt;p&gt;You can test how &lt;code&gt;btoa&lt;/code&gt; and &lt;code&gt;atob&lt;/code&gt; works below:
 &lt;div&gt;
-&lt;label for=&#34;decoded&#34;&gt;Decoded: &lt;/label&gt;&lt;input type=&#39;text&#39; id=&#39;decoded&#39;  placeholder=&#34;hello@world.com&#34; /&gt;&lt;br&gt;
-&lt;label for=&#34;encoded&#34;&gt;Encoded: &lt;/label&gt;&lt;input type=&#39;text&#39; id=&#39;encoded&#39;  placeholder=&#34;aGVsbG9Ad29ybGQuY29t&#34;/&gt;
+&lt;label for=&#34;decoded&#34;&gt;Decoded: &lt;/label&gt;&lt;input type=&#39;text&#39; id=&#39;decoded&#39; /&gt;&lt;br&gt;
+&lt;label for=&#34;encoded&#34;&gt;Encoded: &lt;/label&gt;&lt;input type=&#39;text&#39; id=&#39;encoded&#39; /&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Updating &lt;code&gt;a&lt;/code&gt; &lt;code&gt;href&lt;/code&gt; attribute and text&lt;/h3&gt;
@@ -129,6 +129,9 @@ btoa(&#39;your@email.address&#39;)
 $(function () {
   var decodedTextField = $(&#34;#decoded&#34;);
   var encodedTextField = $(&#34;#encoded&#34;);
+
+  decodedTextField.val(&#39;hello@world.com&#39;);
+  encodedTextField.val(btoa(&#39;hello@world.com&#39;));
 
   decodedTextField.on(&#39;input&#39;, function () {
     encodedTextField.val(btoa(decodedTextField.val()));

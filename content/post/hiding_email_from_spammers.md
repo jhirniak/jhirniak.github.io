@@ -54,8 +54,8 @@ btoa('your@email.address')
 
 You can test how `btoa` and `atob` works below:
 <div>
-<label for="decoded">Decoded: </label><input type='text' id='decoded'  placeholder="hello@world.com" /><br>
-<label for="encoded">Encoded: </label><input type='text' id='encoded'  placeholder="aGVsbG9Ad29ybGQuY29t"/>
+<label for="decoded">Decoded: </label><input type='text' id='decoded' /><br>
+<label for="encoded">Encoded: </label><input type='text' id='encoded' />
 </div>
 
 ### Updating `a` `href` attribute and text
@@ -125,6 +125,9 @@ The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.co
 $(function () {
   var decodedTextField = $("#decoded");
   var encodedTextField = $("#encoded");
+
+  decodedTextField.val('hello@world.com');
+  encodedTextField.val(btoa('hello@world.com'));
 
   decodedTextField.on('input', function () {
   	encodedTextField.val(btoa(decodedTextField.val()));

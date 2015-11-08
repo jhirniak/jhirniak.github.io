@@ -108,8 +108,8 @@ btoa('your@email.address')
 
 <p>You can test how <code>btoa</code> and <code>atob</code> works below:
 <div>
-<label for="decoded">Decoded: </label><input type='text' id='decoded'  placeholder="hello@world.com" /><br>
-<label for="encoded">Encoded: </label><input type='text' id='encoded'  placeholder="aGVsbG9Ad29ybGQuY29t"/>
+<label for="decoded">Decoded: </label><input type='text' id='decoded' /><br>
+<label for="encoded">Encoded: </label><input type='text' id='encoded' />
 </div></p>
 
 <h3 id="updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5">Updating <code>a</code> <code>href</code> attribute and text</h3>
@@ -176,6 +176,9 @@ btoa('your@email.address')
 $(function () {
   var decodedTextField = $("#decoded");
   var encodedTextField = $("#encoded");
+
+  decodedTextField.val('hello@world.com');
+  encodedTextField.val(btoa('hello@world.com'));
 
   decodedTextField.on('input', function () {
     encodedTextField.val(btoa(decodedTextField.val()));
