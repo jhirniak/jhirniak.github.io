@@ -117,9 +117,10 @@ $(function () {
 
 ## Demo
 
-I used this method on my [about page]({{< relref "about.md" >}}) page. But, the below example uses email hidden in the `encoded` field above.
+I used this method on my [about page]({{< relref "about.md" >}}) page. But, the below example uses email encoded in the `encoded` field above.
 
-The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.
+<pre>The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.
+</pre>
 
 <script type='text/javascript'>
   $(function () {

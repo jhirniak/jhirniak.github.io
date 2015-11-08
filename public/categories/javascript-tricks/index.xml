@@ -121,9 +121,10 @@ btoa(&#39;your@email.address&#39;)
 
 &lt;h2 id=&#34;demo:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Demo&lt;/h2&gt;
 
-&lt;p&gt;I used this method on my &lt;a href=&#34;http://jhirniak.github.io/about/&#34;&gt;about page&lt;/a&gt; page. But, the below example uses email hidden in the &lt;code&gt;encoded&lt;/code&gt; field above.&lt;/p&gt;
+&lt;p&gt;I used this method on my &lt;a href=&#34;http://jhirniak.github.io/about/&#34;&gt;about page&lt;/a&gt; page. But, the below example uses email encoded in the &lt;code&gt;encoded&lt;/code&gt; field above.&lt;/p&gt;
 
-&lt;p&gt;The best way to contact me is via email &lt;a id=&#34;mm&#34; href=&#34;mailto:nospam@thanks.com&#34;&gt;click to reveal (JS required)&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;The best way to contact me is via email &lt;a id=&#34;mm&#34; href=&#34;mailto:nospam@thanks.com&#34;&gt;click to reveal (JS required)&lt;/a&gt;.
+&lt;/pre&gt;
 
 &lt;script type=&#39;text/javascript&#39;&gt;
   $(function () {
