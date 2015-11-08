@@ -11,7 +11,7 @@ slug = "hiding_email_with_jquery"
 
 +++
 
-## Requirements 1
+## Requirements
 
 1. jQuery:
 
