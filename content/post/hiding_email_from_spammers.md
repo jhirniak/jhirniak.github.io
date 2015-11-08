@@ -111,7 +111,7 @@ $(function () {
 
 ## Demo
 
-I took this demo from my [about page]({{< rel "about.md" >}}).
+I took this demo from my [about page]({{< relref "about.md" >}}).
 
 The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.
 

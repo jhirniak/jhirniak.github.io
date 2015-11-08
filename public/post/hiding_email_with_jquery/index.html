@@ -163,7 +163,35 @@ $(function () {
 
 <h2 id="demo:a8dbd5823328f76daa5b24981e9dc3b5">Demo</h2>
 
-<p>I took this demo from my [about page](</p>
+<p>I took this demo from my <a href="/about/">about page</a>.</p>
+
+<p>The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.</p>
+
+<script type='text/javascript'>
+$(function () {
+  var decodedTextField = $("#decoded");
+  var encodedTextField = $("#encoded");
+
+  decodedTextFieldd.on('input', function () {
+    alert('typed');
+    encodedTextField.text(btoa(decodedTextField.text()));
+  });
+
+  encodedTextField.on('input', function () {
+    decodedTextField.text(atob(encodedTextField.text()));
+  });
+
+
+  $("a#mm").click(function (e) {
+    console.log('Fired');
+    var secret = function () { return atob('akBoaXJuaWFrLmluZm8=') };
+    $(this).attr("href", 'mailto:' + secret());
+    $(this).text(secret());
+    $(this).off("click");
+    e.preventDefault();
+  });
+});
+</script>
 
 	        </section>
 
