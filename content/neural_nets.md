@@ -4,6 +4,10 @@ title = "Neural Nets"
 menu = "main"
 +++
 
+## Purpose of this page
+
+Here I list everything interesting that I encountered on my journey of learning neural nets, for my reference, and for anyone who could find such a list useful in their own learning ;).
+
 ## Courses
 * CS231n: Convolutional Neural Networks for Visual Recognition at Stanford
   * [Course website](http://cs231n.stanford.edu/)
