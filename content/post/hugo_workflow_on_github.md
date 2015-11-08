@@ -8,9 +8,9 @@ tags = [ "Hugo", "GitHub Pages", "workflow", "deployment"]
 categories = [ "Web Development" ]
 series = [ "Hugo" ]
 slug = "hugo"
-+++
 
 +++
+
 1. [Hosting personal/organizational page in one repo]({{< relref "#hosting-personal-organizational-page-in-one-repo" >}})
 2. [Hosting personal/organizational page in two repos]({{< relref "#hosting-personal-organizational-page-in-two-repos" >}})
 3. [Hosting project page]({{< relref "#hosting-project-page" >}})
