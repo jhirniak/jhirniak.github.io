@@ -15,8 +15,8 @@ The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.co
 <script type='text/javascript'>
 $("a#mm").click(function () {
 	  var secret = function () { return atob('akBoaXJuaWFrLmluZm8='); }
-      $(this).attr("href", 'mailto:' + secret);
-      $(this).value(secret);
+      
+      $(this).value(secret());
       $(this).off("click");
       $(this).click();
   });
