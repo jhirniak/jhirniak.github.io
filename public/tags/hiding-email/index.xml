@@ -135,20 +135,31 @@ $(function () {
 
   decodedTextField.on(&#39;input&#39;, function () {
     encodedTextField.val(btoa(decodedTextField.val()));
+    bindMailReveal();
   });
 
   encodedTextField.on(&#39;input&#39;, function () {
     decodedTextField.val(atob(encodedTextField.val()));
+    bindMailReveal();
   });
 
 
+function bindMailReveal() {
   $(&#34;a#mm&#34;).click(function (e) {
-    console.log(&#39;Fired&#39;);
+    console.log(&#39;Reveal the email.&#39;);
     var secret = function () { return atob($(&#34;#encoded&#34;).val()); };
     $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
+    $(this).text(&#34;click to reveal (JS required)&#34;);
     $(this).text(secret());
     $(this).off(&#34;click&#34;);
     e.preventDefault();
+
+  });
+  console.log(&#39;Binded mail encode function.&#39;);
+};
+
+bindMailReveal();
+
   });
 });
 &lt;/script&gt;
