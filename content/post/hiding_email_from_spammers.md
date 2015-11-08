@@ -151,6 +151,7 @@ I used this method on my [about page]({{< relref "about.md" >}}) page. But, the 
       e.preventDefault();
     });
     $("a#mm").text("click to reveal (JS required)");
+    $(this).attr("href", 'mailto:' + "nospam@thanks.com");
     console.log('Binded mail encode function.');
   }
 

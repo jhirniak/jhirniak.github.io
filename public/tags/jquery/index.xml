@@ -155,6 +155,7 @@ btoa(&#39;your@email.address&#39;)
       e.preventDefault();
     });
     $(&#34;a#mm&#34;).text(&#34;click to reveal (JS required)&#34;);
+    $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + &#34;nospam@thanks.com&#34;);
     console.log(&#39;Binded mail encode function.&#39;);
   }
 
