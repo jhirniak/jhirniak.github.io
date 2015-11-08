@@ -18,8 +18,8 @@ paginate = 40
 	# To provide some metadata for search engines and the about section in the footer
 	# feel free to add a few information about you and your website.
 	name = "Jaroslaw Hirniak"
-	bio = "... to be done"
-	description = "Your description of the blog"
+	bio = "I am software developer with deep interest in distributed and parallel systems, machine learning, and big data. I created this blog to share interesting ideas and resources as well as to publish the projects and ideas that I work on."
+	description = "Jaroslaw Hirniak's rants on distributed and parallel computing, machine learning, and software engineering."
 	location = "" # optional
 	twitter = "ravanave" # optional
 	github = "jhirniak" # optional
