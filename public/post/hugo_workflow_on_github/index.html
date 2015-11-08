@@ -62,7 +62,26 @@
 	        <section class="post-content">
 	            
 
+<ol>
+<li><a href="#Hosting personal/organizational page in one repo">Hosting personal/organizational page in one repo</a></li>
+<li><a href="#Hosting personal/organizational page in two repos">Hosting personal/organizational page in two repos</a></li>
+<li><a href="#Hosting project page">Hosting project page</a></li>
+</ol>
+
 <h2 id="hosting-hugo-on-github-pages-workflow:55e98266337c51f1413d03075e44f733">Hosting Hugo on GitHub pages: workflow</h2>
+
+<p><a href="https://pages.github.com/">GitHub</a> is a great and convenient place to host your static pages - it gives you a nice website address with <code>github.io</code> and combines repo for your website with hosting. Furthermore, it is free and ad-free. I believe if set up right then it can save you considerable time. In this post I share a great git workflow I use for this blog with a <a href="https://gohugo.io/">Hugo static engine</a>. The workflow was described by <a href="https://gohugo.io/tutorials/github-pages-blog/">Spencer Lyon in his tutorial on hosting Hugo on GitHub pages</a>, here I share 2 workflows described by Spencer and one my own.</p>
+
+<h2 id="hosting-personal-organizational-page-in-one-repo:55e98266337c51f1413d03075e44f733">Hosting personal/organizational page in one repo</h2>
+
+<p>If you are creating a new repo then just do follow the instructions exactly. You can rename <code>code</code> branch to anything you like, except <code>master</code>, as <code>master</code> is a branch from which GitHub Pages get static website content. Note, that the website available under <code>&lt;your-username&gt;.github.io</code> must be hosted in a repo called <code>&lt;your-username&gt;.github.io</code>.</p>
+
+<p>If you have extisting repo at <code>&lt;your-username&gt;.github.io</code> then you can either delete the repo and start clean following the instructions or delete the master branch with <code>git branch -D master</code> making sure before if that branch has your website code that you checked it out to another branch with <code>git checkout -b &lt;code-branch&gt;</code> and `git push origin <code-branch>&rsquo;.</p>
+
+<ol>
+<li>Create <code>&lt;your-username&gt;.github.io</code> repo. Alternatively, if you have got existing <code>&lt;your-username&gt;.github.io</code> repo then make sure to checkout code to non-<code>master</code> branch with steps described above.</li>
+<li>If you are starting fresh initialize the repo:</li>
+</ol>
 
 <pre><code class="language-bash">git init
 git checkout code
@@ -71,13 +90,22 @@ git add .
 git commit -m 'Initial commit'
 git remote add origin git@github.com:username/username.github.io git
 git push -u origin code
+</code></pre>
+
+<ol>
+<li>Now, the steps regardless if repo existed or not are the same. Create orphan branch (a branch that has no common history with an existing branch) called <code>master</code>. We will synchronize its code with <code>public</code> folder of the <code>code</code> branch.</li>
+</ol>
+
+<pre><code class="language-bash"># Set up orphan branch master
 git checkout --orphan master
 git rm --cached $(git ls-files)
 git checkout code README.md
-git add
+git add .
 git commit -m &quot;INIT: initial commit on master branch&quot;
 git push origin master
+
 git checkout code
+
 # Create Hugo website or copy existing files for Hugo website
 rm -rf public/
 git subtree add --prefix=public git@github.com:username/username.github.io.git master --squash
@@ -89,17 +117,25 @@ git push origin code
 git subtree push --prefix=public git@github.com:username/username.github.io.git master --squash
 </code></pre>
 
-<h2 id="deploy-sh:55e98266337c51f1413d03075e44f733">Deploy.sh</h2>
+<h3 id="deploy-sh:55e98266337c51f1413d03075e44f733">Deploy.sh</h3>
+
+<p>To automate the above process of commiting to code branch, generating Hugo static pages, and pushing them to <code>master</code> branch we will create <code>deploy.sh</code> script. Remember, to update <code>&lt;your-username&gt;</code>, <your-project>, and if you used different prefix <code>--prefix</code> in the script. Finally, make the script executable with <code>chmod +x deploy.sh</code> and commit it to the repo. To use the script you just need to type <code>./deploy.sh &lt;commit-message&gt;</code>. If you leave <code>&lt;commit-message&gt;</code> empty then <code>rebuilding site &lt;current-date&gt;</code> will be used instead.</p>
 
 <pre><code class="language-bash">#!/bin/bash
 
 echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
 
-# Build the project.
-# hugo -t hugo-steam-theme
-hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
+# Build the project
+# You may need to use some of the below options:
+#   * -b=http://&lt;your-username&gt;.github.io/&lt;your-project&gt;
+#   * --theme=&lt;your-theme-name&gt;
+#   * --buildDrafts   # include drafts
+#   * -d=&lt;static-pages-dir&gt;
+#   * -v   # verbose
+#
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
+hugo 
 
-# Add changes to git.
 git add -A
 
 # Commit changes.
@@ -111,8 +147,159 @@ git commit -m &quot;$msg&quot;
 
 # Push source and build repos.
 git push origin code
-git subtree push --prefix=public git@github.com:jhirniak/jhirniak.github.io.git master
+# Example:
+# git subtree push --prefix=public git@github.com:jhirniak/jhirniak.github.io.git master
+git subtree push --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-username&gt;.github.io.git master
+</code></pre>
 
+<h2 id="hosting-personal-organizational-page-in-two-repos:55e98266337c51f1413d03075e44f733">Hosting personal/organizational page in two repos</h2>
+
+<p>When you divide project into a submodule for the <code>username.github.io</code> static pages from <code>public</code> folder (or the one that you use) and separate repo for the website code then the procedure is quite simple.</p>
+
+<p>Step by step:</p>
+
+<ol>
+<li>Create <code>code</code> repository, e.g. <code>&lt;username&gt;-hugo</code>.</li>
+<li>Create static <code>website</code> repository, i.e. <code>&lt;username&gt;.github.io</code>, for <code>public</code> folder of you hugo website.</li>
+<li>Create website at <code>&lt;username&gt;-hugo</code>, test it with <code>hugo server --watch -t &lt;yourtheme&gt;</code>, and once happy remove <code>public</code> folder with <code>rm -rf public</code> and commit changes.</li>
+<li>Add submodule at <code>&lt;username&gt;-hugo</code> repo with:</li>
+</ol>
+
+<pre><code class="language-bash">git submodule add git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git public
+</code></pre>
+
+<ol>
+<li>Add <code>deploy.sh</code> script and make it executable with <code>chmod +x deploy.sh</code>.</li>
+</ol>
+
+<h3 id="deploy-sh-1:55e98266337c51f1413d03075e44f733">Deploy.sh</h3>
+
+<p>Remember, to update <code>&lt;your-username&gt;</code>, <your-project>, and if you used different prefix <code>--prefix</code> in the script. Finally, make the script executable with <code>chmod +x deploy.sh</code> and commit it to the repo. To use the script you just need to type <code>./deploy.sh &lt;commit-message&gt;</code>. If you leave <code>&lt;commit-message&gt;</code> empty then <code>rebuilding site &lt;current-date&gt;</code> will be used instead.</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project
+# You may need to use some of the below options:
+#   * -b=http://&lt;your-username&gt;.github.io/&lt;your-project&gt;
+#   * --theme=&lt;your-theme-name&gt;
+#   * --buildDrafts   # include drafts
+#   * -d=&lt;static-pages-dir&gt;
+#   * -v   # verbose
+#
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
+hugo 
+
+cd public    # Go To Public folder
+git add -A   # Add changes to git.
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+git push origin master   # Push source and build repos.
+
+cd ..   # Come Back
+</code></pre>
+
+<h2 id="hosting-project-page:55e98266337c51f1413d03075e44f733">Hosting project page</h2>
+
+<p>Project page workflow is very similar to hosting personal/organizational page, except that the static pages are in <code>gh-pages</code> branch and code in some other branch. Here, we assume that you are creating <code>gh-pages</code> for existing project.</p>
+
+<ol>
+<li>Create an orphan branch (no commit history) <code>gh-pages</code>:</li>
+</ol>
+
+<pre><code class="language-bash">git checkout --orphan gh-pages
+
+# Unstage all files
+git rm --cached $(git ls-files)
+
+# Grab one file from the master branch to make a commit
+git checkout master README.md
+
+# Add and commit that file
+git add .
+git commit -m &quot;INIT: initial commit on gh-pages branch&quot;
+
+# Push to remote gh-pages branch
+git push origin gh-pages
+</code></pre>
+
+<ol>
+<li>Now, we will configure workflow on the branch that has Hugo files, here we assume it is on <code>master</code> branch, but it could be any.</li>
+</ol>
+
+<pre><code class="language-bash">git checkout master # Return to master branch
+
+git checkout -b website # Or create new branch for the website
+
+3. Create or copy your Hugo project if you have not got it ready, yet.
+
+4. Set up workflow:
+```bash 
+# Remove the public folder to make room for the gh-pages subtree
+rm -rf public
+
+# Add the gh-pages branch of the repository.
+git subtree add --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-project&gt;.git gh-pages --squash
+
+# Pull down the file we just committed to avoid merge conflicts.
+# It is the same as above, except for the word `add` that is replaced with word `pull`.
+git subtree pull --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-project&gt;.git gh-pages
+
+# Generate static pages with Hugo.
+# You may need to use some of the below options:
+#   * -b=http://&lt;your-username&gt;.github.io/&lt;your-project&gt;
+#   * --theme=&lt;your-theme-name&gt;
+#   * --buildDrafts   # include drafts
+#   * -d=&lt;static-pages-dir&gt;
+#   * -v   # verbose
+hugo 
+
+
+# Commit changes
+git add -A
+git commit -m &quot;Updating site&quot;
+git push origin master
+
+# Push the `public` subtree to the `gh-pages`
+git subtree push --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-project&gt;.git gh-pages
+</code></pre>
+
+<h3 id="deploy-sh-2:55e98266337c51f1413d03075e44f733">Deploy.sh</h3>
+
+<p>To automate the whole process add the below <code>deploy.sh</code> script. Remember, to update <code>&lt;your-username&gt;</code>, <your-project>, and if you used different prefix <code>--prefix</code> in the script. Finally, make the script executable with <code>chmod +x deploy.sh</code> and commit it to the repo. To use the script you just need to type <code>./deploy.sh &lt;commit-message&gt;</code>. If you leave <code>&lt;commit-message&gt;</code> empty then <code>rebuilding site &lt;current-date&gt;</code> will be used instead.</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project
+# You may need to use some of the below options:
+#   * -b=http://&lt;your-username&gt;.github.io/&lt;your-project&gt;
+#   * --theme=&lt;your-theme-name&gt;
+#   * --buildDrafts   # include drafts
+#   * -d=&lt;static-pages-dir&gt;
+#   * -v   # verbose
+hugo 
+
+git add -A
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+git subtree push --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-project&gt;.git gh-pages
 </code></pre>
 
 	        </section>
