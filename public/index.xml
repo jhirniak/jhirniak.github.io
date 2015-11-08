@@ -54,7 +54,8 @@ data in ASCII string format. For most implementations base64 uses &lt;code&gt;A-
 /** Converts binary to ASCII representation */
 btoa(&amp;lsquo;your@email.address&amp;rsquo;)&lt;/p&gt;
 
-&lt;p&gt;You can test how &lt;code&gt;btoa&lt;/code&gt; and &lt;code&gt;atob&lt;/code&gt; works below:&lt;/p&gt;
+&lt;p&gt;You can test how &lt;code&gt;btoa&lt;/code&gt; and &lt;code&gt;atob&lt;/code&gt; works below:
+shortcoded&lt;/p&gt;
 </description>
     </item>
     
