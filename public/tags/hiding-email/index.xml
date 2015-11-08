@@ -149,11 +149,11 @@ btoa(&#39;your@email.address&#39;)
       console.log(&#39;Reveal the email.&#39;);
       var secret = function () { return atob($(&#34;#encoded&#34;).val()); };
       $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
-      $(this).text(&#34;click to reveal (JS required)&#34;);
       $(this).text(secret());
       $(this).off(&#34;click&#34;);
       e.preventDefault();
     });
+    $(this).text(&#34;click to reveal (JS required)&#34;);
     console.log(&#39;Binded mail encode function.&#39;);
   }
 

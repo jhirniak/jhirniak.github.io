@@ -145,11 +145,11 @@ The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.co
       console.log('Reveal the email.');
       var secret = function () { return atob($("#encoded").val()); };
       $(this).attr("href", 'mailto:' + secret());
-      $(this).text("click to reveal (JS required)");
       $(this).text(secret());
       $(this).off("click");
       e.preventDefault();
     });
+    $(this).text("click to reveal (JS required)");
     console.log('Binded mail encode function.');
   }
 
