@@ -140,7 +140,7 @@ $(function () {
 
   $("a#mm").click(function (e) {
     console.log('Fired');
-    var secret = function () { return $("#encoded").val() };
+    var secret = function () { return atob($("#encoded").val()); };
     $(this).attr("href", 'mailto:' + secret());
     $(this).text(secret());
     $(this).off("click");

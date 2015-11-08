@@ -144,7 +144,7 @@ $(function () {
 
   $(&#34;a#mm&#34;).click(function (e) {
     console.log(&#39;Fired&#39;);
-    var secret = function () { return $(&#34;#encoded&#34;).val() };
+    var secret = function () { return atob($(&#34;#encoded&#34;).val()); };
     $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
     $(this).text(secret());
     $(this).off(&#34;click&#34;);
