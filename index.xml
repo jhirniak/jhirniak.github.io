@@ -25,8 +25,8 @@
 &lt;script type=&#39;text/javascript&#39;&gt;
 $(&#34;a#mm&#34;).click(function () {
       var secret = function () { return atob(&#39;akBoaXJuaWFrLmluZm8=&#39;); }
-      $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret);
-      $(this).value(secret);
+      
+      $(this).value(secret());
       $(this).off(&#34;click&#34;);
       $(this).click();
   });
