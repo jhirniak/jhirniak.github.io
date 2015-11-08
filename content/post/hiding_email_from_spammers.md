@@ -47,8 +47,6 @@ Here we will use string encoded before to obfruscate email address from the webs
 btoa('your@email.address')
 
 You can test how `btoa` and `atob` works below:
-shortcoded
-{{< myshortcode >}}
 <label for="decoded">Decoded: </label><input type='text' id='decoded' />
 <label for="encoded">Encoded: </label><input type='text' id='encoded' />
 
@@ -66,7 +64,6 @@ $( function () {
   });
 });
 </script>
-{{< /myshortcode >}}
 
 ```
 ### Updating `a` `href` attribute and text
