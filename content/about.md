@@ -12,13 +12,17 @@ If you would like to learn more about me then visit my [LinkedIn profile](https:
 The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>. 5
 
 <script type='text/javascript'>
+var mmRevealed = false;
 $("a#mm").click(function (e) {
-  console.log('Fired');
-  var secret = function () { return atob('akBoaXJuaWFrLmluZm8='); }
-  $(this).attr("href", 'mailto:' + secret());
-  $(this).text(secret());
-  $(this).off("click");
-  e.preventDefault();
-  // $(this).click();
+  if (!mmRevealed) {
+  	  mmRevealed = true;
+	  console.log('Fired');
+	  var secret = function () { return atob('akBoaXJuaWFrLmluZm8='); }
+	  $(this).attr("href", 'mailto:' + secret());
+	  $(this).text(secret());
+	  $(this).off("click");
+	  e.preventDefault();
+	  // $(this).click();
+	}
   });
 </script>
