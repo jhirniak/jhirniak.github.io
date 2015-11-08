@@ -5,4 +5,4 @@ title = "about"
 menu = "main"
 +++
 ## About this blog
-blabla
+blablabla
