@@ -6,8 +6,17 @@
     <description>Recent content on Jaroslaw Hirniak&#39;s Pirate Parrot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2015 02:41:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2015 02:46:58 +0000</lastBuildDate>
     <atom:link href="http://jhirniak.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>neural_nets</title>
+      <link>http://jhirniak.github.io/neural_nets/</link>
+      <pubDate>Sun, 08 Nov 2015 02:46:58 +0000</pubDate>
+      
+      <guid>http://jhirniak.github.io/neural_nets/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>first</title>
