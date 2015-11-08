@@ -17,6 +17,24 @@
       <guid>http://jhirniak.github.io/neural_nets/</guid>
       <description>
 
+&lt;h2 id=&#34;courses:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Courses&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CS231n: Convolutional Neural Networks for Visual Recognition at Stanford
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs231n.stanford.edu/&#34;&gt;Course website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs231n.github.io/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs231n.github.io/convolutional-networks/&#34;&gt;ConvNets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Machine Learning at Oxford:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/&#34;&gt;Course website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/user/ProfNandoDF/videos&#34;&gt;Videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;resources-for-learning-about-neural-networks:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Resources for learning about Neural Networks&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -56,6 +74,7 @@
 &lt;li&gt;&lt;a href=&#34;http://cs.stanford.edu/people/karpathy/convnetjs/&#34;&gt;Andrej Karpathy: ConvNetJS - Deep Learning in your browser&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://cs231n.github.io/convolutional-networks/&#34;&gt;CS231n Convolutional Neural Networks for Visual Recognition&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://cs231n.github.io/&#34;&gt;CS231n Whole Course on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Deep Learning Oxford Course, Lecture 10: Convolutional Neural Networks]&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;advanced:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Advanced&lt;/h3&gt;
@@ -183,6 +202,7 @@ th
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/twitter/torch-autograd&#34;&gt;Torch Autograd by Twitter for automatically differentiating native Torch code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.twitter.com/2015/autograd-for-torch&#34;&gt;Autograd for Torch by Twitter.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;cool-projects:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Cool projects&lt;/h2&gt;
