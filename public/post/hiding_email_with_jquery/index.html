@@ -173,41 +173,39 @@ btoa('your@email.address')
 <p>The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.</p>
 
 <script type='text/javascript'>
-$(function () {
-  var decodedTextField = $("#decoded");
-  var encodedTextField = $("#encoded");
+  $(function () {
+    var decodedTextField = $("#decoded");
+    var encodedTextField = $("#encoded");
 
-  decodedTextField.val('hello@world.com');
-  encodedTextField.val(btoa('hello@world.com'));
+    decodedTextField.val('hello@world.com');
+    encodedTextField.val(btoa('hello@world.com'));
 
-  decodedTextField.on('input', function () {
-    encodedTextField.val(btoa(decodedTextField.val()));
-    bindMailReveal();
-  });
+    decodedTextField.on('input', function () {
+      encodedTextField.val(btoa(decodedTextField.val()));
+      bindMailReveal();
+    });
 
-  encodedTextField.on('input', function () {
+    encodedTextField.on('input', function () {
     decodedTextField.val(atob(encodedTextField.val()));
     bindMailReveal();
   });
 
 
-function bindMailReveal() {
-  $("a#mm").click(function (e) {
-    console.log('Reveal the email.');
-    var secret = function () { return atob($("#encoded").val()); };
-    $(this).attr("href", 'mailto:' + secret());
-    $(this).text("click to reveal (JS required)");
-    $(this).text(secret());
-    $(this).off("click");
-    e.preventDefault();
+  function bindMailReveal() {
+    $("a#mm").click(function (e) {
+      console.log('Reveal the email.');
+      var secret = function () { return atob($("#encoded").val()); };
+      $(this).attr("href", 'mailto:' + secret());
+      $(this).text("click to reveal (JS required)");
+      $(this).text(secret());
+      $(this).off("click");
+      e.preventDefault();
+    });
+    console.log('Binded mail encode function.');
+  }
 
-  });
-  console.log('Binded mail encode function.');
-};
+  bindMailReveal();
 
-bindMailReveal();
-
-  });
 });
 </script>
 
