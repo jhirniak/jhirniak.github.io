@@ -1,1 +1,1 @@
-# jhirniak.github.io
+# jhirniak.github.io personal blog
