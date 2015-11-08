@@ -4,6 +4,16 @@ title = "Neural Nets"
 menu = "main"
 +++
 
+## Courses
+* CS231n: Convolutional Neural Networks for Visual Recognition at Stanford
+  * [Course website](http://cs231n.stanford.edu/)
+  * [GitHub](http://cs231n.github.io/)
+  * [ConvNets](http://cs231n.github.io/convolutional-networks/)
+* Machine Learning at Oxford:
+  * [Course website](https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/)
+  * [Videos](https://www.youtube.com/user/ProfNandoDF/videos)
+
+
 ## Resources for learning about Neural Networks
 
 * [Andrej Karpathy: Blog](http://karpathy.github.io/neuralnets/)
@@ -34,6 +44,7 @@ menu = "main"
 * [Andrej Karpathy: ConvNetJS - Deep Learning in your browser](http://cs.stanford.edu/people/karpathy/convnetjs/)
 * [CS231n Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
 * [CS231n Whole Course on GitHub](http://cs231n.github.io/)
+* [Deep Learning Oxford Course, Lecture 10: Convolutional Neural Networks]
 
 ### Advanced
 
@@ -128,6 +139,7 @@ th
 #### Advanced
 
 * [Torch Autograd by Twitter for automatically differentiating native Torch code](https://github.com/twitter/torch-autograd)
+* [Autograd for Torch by Twitter.](https://blog.twitter.com/2015/autograd-for-torch)
 
 ## Cool projects
 
