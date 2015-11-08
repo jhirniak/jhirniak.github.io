@@ -17,7 +17,7 @@
       <guid>http://jhirniak.github.io/post/hiding_email_with_jquery/</guid>
       <description>
 
-&lt;h2 id=&#34;requirements:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Requirements~&lt;/h2&gt;
+&lt;h2 id=&#34;requirements:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;jQuery:&lt;/li&gt;
@@ -144,7 +144,7 @@ $(function () {
 
   $(&#34;a#mm&#34;).click(function (e) {
     console.log(&#39;Fired&#39;);
-    var secret = function () { $(&#34;#encoded&#34;).val() };
+    var secret = function () { return $(&#34;#encoded&#34;).val() };
     $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
     $(this).text(secret());
     $(this).off(&#34;click&#34;);

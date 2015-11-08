@@ -11,7 +11,7 @@ slug = "hiding_email_with_jquery"
 
 +++
 
-## Requirements~
+## Requirements
 
 * jQuery:
 
@@ -140,7 +140,7 @@ $(function () {
 
   $("a#mm").click(function (e) {
     console.log('Fired');
-    var secret = function () { $("#encoded").val() };
+    var secret = function () { return $("#encoded").val() };
     $(this).attr("href", 'mailto:' + secret());
     $(this).text(secret());
     $(this).off("click");
