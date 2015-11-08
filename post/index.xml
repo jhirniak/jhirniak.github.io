@@ -126,41 +126,39 @@ btoa(&#39;your@email.address&#39;)
 &lt;p&gt;The best way to contact me is via email &lt;a id=&#34;mm&#34; href=&#34;mailto:nospam@thanks.com&#34;&gt;click to reveal (JS required)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;script type=&#39;text/javascript&#39;&gt;
-$(function () {
-  var decodedTextField = $(&#34;#decoded&#34;);
-  var encodedTextField = $(&#34;#encoded&#34;);
+  $(function () {
+    var decodedTextField = $(&#34;#decoded&#34;);
+    var encodedTextField = $(&#34;#encoded&#34;);
 
-  decodedTextField.val(&#39;hello@world.com&#39;);
-  encodedTextField.val(btoa(&#39;hello@world.com&#39;));
+    decodedTextField.val(&#39;hello@world.com&#39;);
+    encodedTextField.val(btoa(&#39;hello@world.com&#39;));
 
-  decodedTextField.on(&#39;input&#39;, function () {
-    encodedTextField.val(btoa(decodedTextField.val()));
-    bindMailReveal();
-  });
+    decodedTextField.on(&#39;input&#39;, function () {
+      encodedTextField.val(btoa(decodedTextField.val()));
+      bindMailReveal();
+    });
 
-  encodedTextField.on(&#39;input&#39;, function () {
+    encodedTextField.on(&#39;input&#39;, function () {
     decodedTextField.val(atob(encodedTextField.val()));
     bindMailReveal();
   });
 
 
-function bindMailReveal() {
-  $(&#34;a#mm&#34;).click(function (e) {
-    console.log(&#39;Reveal the email.&#39;);
-    var secret = function () { return atob($(&#34;#encoded&#34;).val()); };
-    $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
-    $(this).text(&#34;click to reveal (JS required)&#34;);
-    $(this).text(secret());
-    $(this).off(&#34;click&#34;);
-    e.preventDefault();
+  function bindMailReveal() {
+    $(&#34;a#mm&#34;).click(function (e) {
+      console.log(&#39;Reveal the email.&#39;);
+      var secret = function () { return atob($(&#34;#encoded&#34;).val()); };
+      $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
+      $(this).text(&#34;click to reveal (JS required)&#34;);
+      $(this).text(secret());
+      $(this).off(&#34;click&#34;);
+      e.preventDefault();
+    });
+    console.log(&#39;Binded mail encode function.&#39;);
+  }
 
-  });
-  console.log(&#39;Binded mail encode function.&#39;);
-};
+  bindMailReveal();
 
-bindMailReveal();
-
-  });
 });
 &lt;/script&gt;
 </description>
