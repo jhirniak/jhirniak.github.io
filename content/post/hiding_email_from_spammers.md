@@ -122,11 +122,11 @@ $(function () {
 
   decodedTextField.on('input', function () {
   	alert('typed');
-  	encodedTextField.text(btoa(decodedTextField.text()));
+  	encodedTextField.val(btoa(decodedTextField.val()));
   });
 
   encodedTextField.on('input', function () {
-  	decodedTextField.text(atob(encodedTextField.text()));
+  	decodedTextField.val(atob(encodedTextField.val()));
   });
 
 
