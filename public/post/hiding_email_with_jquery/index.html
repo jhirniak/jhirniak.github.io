@@ -76,26 +76,31 @@
 </code></pre>
 
 <ul>
-<li>This trick will only work on browsers with enabled JavaScript and it is estimated that <a href="https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/">about 1% of Internet users will have not</a>. So, this trick may not work for everyone. For me it is fine because of my target audience.</li>
+<li>This trick will only work on browsers with enabled JavaScript and it is estimated that <a href="https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/">about 1% of Internet users have JavaScript disabled</a>. So, this trick may not work for everyone. For me it is fine because of my target audience.</li>
 </ul>
 
 <h2 id="the-nuts-and-bolts:a8dbd5823328f76daa5b24981e9dc3b5">The nuts and bolts</h2>
 
-<p>We will create a dummy <code>a</code> object such as</p>
+<p>We will create a dummy <code>a</code> tag such as</p>
 
 <pre><code class="language-javascript">&lt;a id=&quot;mm&quot; href=&quot;mailto:nospam@thanks.com&quot;&gt;click to reveal (JS required)&lt;/a&gt;
 </code></pre>
 
-<p>for which click we will intercept, decode email address from base64 representation, update <code>href</code> attribute and text of <code>a</code> object, prevent default click action (it would open default mail client to the correct mail address, but we want more logical flow), and finally unbind jQuery event trigger to leave default HTML behaviour.</p>
+<p>for which click we will
+1. we will intercept click with jQuery,
+2. decode email address from base64 representation,
+3. update <code>href</code> attribute and text of our <code>a</code> tag,
+4. prevent default click action (i.e. openning default mail client to give it more logical flow),
+5. and finally unbind jQuery event trigger to leave default HTML behaviour, from here on.</p>
 
 <h3 id="base-64:a8dbd5823328f76daa5b24981e9dc3b5">Base 64</h3>
 
-<p>Base64 is just binary-to-text encoding scheme for representing binary
-data in ASCII string format. For most implementations base64 uses <code>A-Z</code>, <code>a-z</code>, and <code>0-9</code> for the first 62 characters, and most differences depend on the last 2.</p>
+<p>Base64 is binary-to-text encoding scheme for representing binary
+data in string format in ASCII string encoding. For most implementations base64 uses <code>A-Z</code>, <code>a-z</code>, and <code>0-9</code> for the first 62 characters of target code, and most differences depend on the last 2. You can think of same as of hexadecimal representation (base 16), octal (base 8), binary (base 2), here our radix (base) is just <code>64</code>, with other requirement being that characters are printable.</p>
 
-<p>Base64 encoding and decoding is available in vanilla JS using <code>btoa</code> (for encoding &ldquo;binary&rdquo; string to encoded ASCII) and <code>btoa</code> for (for decoding encoded ASCII to our original &ldquo;binary&rdquo; string).</p>
+<p>Base64 encoding and decoding is available in vanilla JS using <code>btoa</code> (for encoding &ldquo;binary&rdquo; string to encoded ASCII) and <code>btoa</code> for (for decoding encoded ASCII to our original &ldquo;binary&rdquo; string). You can read more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa">MDN</a>.</p>
 
-<p>Here we will use string encoded before to obfruscate email address from the website source code. To generate binary ASCII binary representation of our email address just run this command, e.g. in developers console:</p>
+<p>Here we will use string encoded before to obfruscate email address from the website source code, e.g. to prevent malicient web crawlers grabbing our email address and using it for spam. We generate base64 encoded string using <code>btoa</code>, e.g. in the developer console (CTRL+SHIFT+J in Chrome) or the snippet below:</p>
 
 <pre><code class="language-javascript">/** Converts binary to ASCII representation */
 btoa('your@email.address')
@@ -103,8 +108,8 @@ btoa('your@email.address')
 
 <p>You can test how <code>btoa</code> and <code>atob</code> works below:
 <div>
-<label for="decoded">Decoded: </label><input type='text' id='decoded' /><br>
-<label for="encoded">Encoded: </label><input type='text' id='encoded' />
+<label for="decoded">Decoded: </label><input type='text' id='decoded'  placeholder="hello@world.com" /><br>
+<label for="encoded">Encoded: </label><input type='text' id='encoded'  placeholder="aGVsbG9Ad29ybGQuY29t"/>
 </div></p>
 
 <h3 id="updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5">Updating <code>a</code> <code>href</code> attribute and text</h3>
@@ -117,6 +122,8 @@ btoa('your@email.address')
 
 <p>Also we want to prevent browser from doing the default action of opening mail client for the update <code>mailto</code> value to give our implementation more natural look and feel (first reveal then email). We do this using <code>preventDefault()</code> function on event <code>e</code> passed to our function on the event trigger.</p>
 
+<p>Note that because of the scope, i.e. inside <code>$(&quot;a#mm&quot;)</code> we can use <code>$(this)</code> to refer to <code>$(&quot;a#mm&quot;)</code>, what we do for clarity.</p>
+
 <pre><code class="language-javascript">$(&quot;a#mm&quot;).click(function (e) {
   // ...
   $(this).off(&quot;click&quot;);
@@ -127,28 +134,27 @@ btoa('your@email.address')
 
 <h3 id="jquery:a8dbd5823328f76daa5b24981e9dc3b5">jQuery</h3>
 
-<p>We can add our event trigger only when document is ready, which we can do by placing our little script at the end of <code>body</code> and surrounding it with</p>
+<p>We can add our event trigger only when document is ready (i.e. browser generated all the fields in body), which we can do by placing our little script at the end of <code>body</code> or separate script and surrounding it with</p>
 
 <pre><code class="language-javasript">$(document).ready(function () {
 	// our implementation
 })
 </code></pre>
 
-<p>or for compactness with</p>
+<p>or for compactness just with</p>
 
 <pre><code class="language-javascript">$(function {
   // our implementation
 })
 </code></pre>
 
-<p>which is equivalent to <code>$(document).ready(...)</code> method.</p>
+<p>where both are equivalent.</p>
 
 <h2 id="final-code:a8dbd5823328f76daa5b24981e9dc3b5">Final code</h2>
 
-<p>Finally our code placed at the end of <code>body</code> looks like this (I encoded here my email address).</p>
+<p>Finally our code, that we can now include on our website, looks like this (email address is taken from the encoded field above).</p>
 
-<pre><code class="language-html">&lt;script type='text/javascript'&gt;
-$(function () {
+<pre><code class="language-javascript">$(function () {
   $(&quot;a#mm&quot;).click(function (e) {
     console.log('Fired');
     var secret = function () { return atob('akBoaXJuaWFrLmluZm8=') };
@@ -158,12 +164,11 @@ $(function () {
     e.preventDefault();
   });
 });
-&lt;/script&gt;
 </code></pre>
 
 <h2 id="demo:a8dbd5823328f76daa5b24981e9dc3b5">Demo</h2>
 
-<p>I took this demo from my <a href="/about/">about page</a>.</p>
+<p>I used this method on my <a href="/about/">about page</a> page. But, the below example uses email hidden in the <code>encoded</code> field above.</p>
 
 <p>The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.</p>
 
@@ -183,7 +188,7 @@ $(function () {
 
   $("a#mm").click(function (e) {
     console.log('Fired');
-    var secret = function () { return atob('akBoaXJuaWFrLmluZm8=') };
+    var secret = function () { $("#encoded").val() };
     $(this).attr("href", 'mailto:' + secret());
     $(this).text(secret());
     $(this).off("click");
