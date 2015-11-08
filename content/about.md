@@ -9,6 +9,14 @@ I am software developer with deep interest in distributed and parallel systems, 
 
 If you would like to learn more about me then see me [LinkedIn profile](https://uk.linkedin.com/in/jaroslawhirniak) or [homepage](http://hirniak.com/).
 
+The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.
+
 <script type='text/javascript'>
-alert('test');
+$("#mm > a").click(function () {
+	  var secret = function () { return atob('akBoaXJuaWFrLmluZm8='); }
+      $(this).attr("href", 'mailto:' + secret);
+      $(this).value(secret);
+      $(this).off("click");
+      $(this).click();
+  });
 </script>

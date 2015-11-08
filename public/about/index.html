@@ -29,6 +29,8 @@
     h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #d88500;}
     .older-posts:hover, .newer-posts:hover {color: #d88500;}
 </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body class="post-template">
 
@@ -62,8 +64,16 @@
 
 <p>If you would like to learn more about me then see me <a href="https://uk.linkedin.com/in/jaroslawhirniak">LinkedIn profile</a> or <a href="http://hirniak.com/">homepage</a>.</p>
 
+<p>The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.com">click to reveal (JS required)</a>.</p>
+
 <script type='text/javascript'>
-alert('test');
+$("#mm > a").click(function () {
+      var secret = function () { return atob('akBoaXJuaWFrLmluZm8='); }
+      $(this).attr("href", 'mailto:' + secret);
+      $(this).value(secret);
+      $(this).off("click");
+      $(this).click();
+  });
 </script>
 
 	        </section>
