@@ -11,7 +11,7 @@ slug = "hiding_email_with_jquery"
 
 +++
 
-## Requirements+
+## Requirements
 
 1. jQuery:
 
@@ -121,7 +121,6 @@ $(function () {
   var encodedTextField = $("#encoded");
 
   decodedTextField.on('input', function () {
-  	alert('typed');
   	encodedTextField.val(btoa(decodedTextField.val()));
   });
 
