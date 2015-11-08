@@ -121,6 +121,7 @@ $(function () {
     e.preventDefault();
   });
 });
+</script>
 ```
 
 ## Demo
