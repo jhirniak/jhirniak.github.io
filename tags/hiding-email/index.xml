@@ -126,6 +126,7 @@ $(function () {
     e.preventDefault();
   });
 });
+&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;demo:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Demo&lt;/h2&gt;
