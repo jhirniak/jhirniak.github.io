@@ -19,8 +19,16 @@
 
 &lt;p&gt;If you would like to learn more about me then see me &lt;a href=&#34;https://uk.linkedin.com/in/jaroslawhirniak&#34;&gt;LinkedIn profile&lt;/a&gt; or &lt;a href=&#34;http://hirniak.com/&#34;&gt;homepage&lt;/a&gt;.&lt;/p&gt;
 
+&lt;p&gt;The best way to contact me is via email &lt;a id=&#34;mm&#34; href=&#34;mailto:nospam@thanks.com&#34;&gt;click to reveal (JS required)&lt;/a&gt;.&lt;/p&gt;
+
 &lt;script type=&#39;text/javascript&#39;&gt;
-alert(&#39;test&#39;);
+$(&#34;#mm &gt; a&#34;).click(function () {
+      var secret = function () { return atob(&#39;akBoaXJuaWFrLmluZm8=&#39;); }
+      $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret);
+      $(this).value(secret);
+      $(this).off(&#34;click&#34;);
+      $(this).click();
+  });
 &lt;/script&gt;
 </description>
     </item>
