@@ -7,7 +7,7 @@ Description = "Workflow set-up description for hosting Hugo personal/organizatio
 tags = [ "Hugo", "GitHub Pages", "workflow", "deployment"]
 categories = [ "Web Development" ]
 series = [ "Hugo" ]
-slug = "hugo"
+slug = "hugo_workflow_for_github"
 
 +++
 
