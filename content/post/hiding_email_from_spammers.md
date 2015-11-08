@@ -48,8 +48,10 @@ btoa('your@email.address')
 ```
 
 You can test how `btoa` and `atob` works below:
-<label for="decoded">Decoded: </label><input type='text' id='decoded' />
+<div>
+<label for="decoded">Decoded: </label><input type='text' id='decoded' /><br>
 <label for="encoded">Encoded: </label><input type='text' id='encoded' />
+</div>
 
 <script type='text/javascript'>
 $( function () {
@@ -66,7 +68,6 @@ $( function () {
 });
 </script>
 
-```
 ### Updating `a` `href` attribute and text
 
 We simply update attribute `href` value with `attr` function and `a` tag content with `text`.
