@@ -53,21 +53,6 @@ You can test how `btoa` and `atob` works below:
 <label for="encoded">Encoded: </label><input type='text' id='encoded' />
 </div>
 
-<script type='text/javascript'>
-$( function () {
-  var decodedTextField = $("#decoded");
-  var encodedTextField = $("#encoded");
-
-  decodedTextFieldd.on('input', function () {
-  	encodedTextField.text(btoa(decodedTextField.text()));
-  });
-
-  encodedTextField.on('input', function () {
-  	decodedTextField.text(atob(encodedTextField.text()));
-  });
-});
-</script>
-
 ### Updating `a` `href` attribute and text
 
 We simply update attribute `href` value with `attr` function and `a` tag content with `text`.
@@ -132,6 +117,19 @@ The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.co
 
 <script type='text/javascript'>
 $(function () {
+  var decodedTextField = $("#decoded");
+  var encodedTextField = $("#encoded");
+
+  decodedTextFieldd.on('input', function () {
+  	alert('typed');
+  	encodedTextField.text(btoa(decodedTextField.text()));
+  });
+
+  encodedTextField.on('input', function () {
+  	decodedTextField.text(atob(encodedTextField.text()));
+  });
+
+
   $("a#mm").click(function (e) {
     console.log('Fired');
     var secret = function () { return atob('akBoaXJuaWFrLmluZm8=') };

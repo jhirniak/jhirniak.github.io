@@ -107,21 +107,6 @@ btoa('your@email.address')
 <label for="encoded">Encoded: </label><input type='text' id='encoded' />
 </div></p>
 
-<script type='text/javascript'>
-$( function () {
-  var decodedTextField = $("#decoded");
-  var encodedTextField = $("#encoded");
-
-  decodedTextFieldd.on('input', function () {
-    encodedTextField.text(btoa(decodedTextField.text()));
-  });
-
-  encodedTextField.on('input', function () {
-    decodedTextField.text(atob(encodedTextField.text()));
-  });
-});
-</script>
-
 <h3 id="updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5">Updating <code>a</code> <code>href</code> attribute and text</h3>
 
 <p>We simply update attribute <code>href</code> value with <code>attr</code> function and <code>a</code> tag content with <code>text</code>.</p>
