@@ -22,19 +22,14 @@
 &lt;p&gt;The best way to contact me is via email &lt;a id=&#34;mm&#34; href=&#34;mailto:nospam@thanks.com&#34;&gt;click to reveal (JS required)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;script type=&#39;text/javascript&#39;&gt;
-var mmRevealed = false;
 $(&#34;a#mm&#34;).click(function (e) {
-  if (!mmRevealed) {
-      mmRevealed = true;
-      console.log(&#39;Fired&#39;);
-      var secret = function () { return atob(&#39;akBoaXJuaWFrLmluZm8=&#39;); }
-      $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
-      $(this).text(secret());
-      $(this).off(&#34;click&#34;);
-      e.preventDefault();
-      // $(this).click();
-    }
-  });
+    console.log(&#39;Fired&#39;);
+    var secret = function () { return atob(&#39;akBoaXJuaWFrLmluZm8=&#39;); }
+    $(this).attr(&#34;href&#34;, &#39;mailto:&#39; + secret());
+    $(this).text(secret());
+    $(&#34;a#mm&#34;).off(&#34;click&#34;);
+  }
+});
 &lt;/script&gt;
 </description>
     </item>
