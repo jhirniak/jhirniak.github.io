@@ -480,9 +480,9 @@ git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&a
       <guid>http://jhirniak.github.io/about/</guid>
       <description>
 
-&lt;h2 id=&#34;about-this-blog:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About this blog&lt;/h2&gt;
+&lt;h2 id=&#34;about-me-and-this-blog:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About me and this blog&lt;/h2&gt;
 
-&lt;p&gt;blablabla&lt;/p&gt;
+&lt;p&gt;I am software developer with deep interest in distributed and parallel systems, machine learning, and big data. I created this blog to share interesting ideas and resources as well as to publish the projects and ideas that I work on.&lt;/p&gt;
 </description>
     </item>
     
