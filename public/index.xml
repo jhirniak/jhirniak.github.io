@@ -6,8 +6,132 @@
     <description>Recent content on Jaroslaw Hirniak&#39;s Pirate Parrot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2015 15:08:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2015 17:02:41 +0000</lastBuildDate>
     <atom:link href="http://jhirniak.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hiding your email address from spammers using jQuery</title>
+      <link>http://jhirniak.github.io/post/hiding_email_with_jquery/</link>
+      <pubDate>Sun, 08 Nov 2015 17:02:41 +0000</pubDate>
+      
+      <guid>http://jhirniak.github.io/post/hiding_email_with_jquery/</guid>
+      <description>
+
+&lt;h2 id=&#34;requirements:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;jQuery:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For this tutorial we will need jQuery, which you can get from &lt;a href=&#34;https://code.jquery.com/&#34;&gt;jQuery CDN&lt;/a&gt;. We will use the latest and minified jQuery from &lt;a href=&#34;https://code.jquery.com/jquery-2.1.4.min.js&#34;&gt;https://code.jquery.com/jquery-2.1.4.min.js&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://code.jquery.com/jquery-2.1.4.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;This trick will only work on browsers with enabled JavaScript and it is estimated that &lt;a href=&#34;https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/&#34;&gt;about 1% of Internet users will have not&lt;/a&gt;. So, this trick may not work for everyone. For me it is fine because of my target audience.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;the-nuts-and-bolts:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;The nuts and bolts&lt;/h2&gt;
+
+&lt;p&gt;We will create a dummy &lt;code&gt;a&lt;/code&gt; object such as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;lt;a id=&amp;quot;mm&amp;quot; href=&amp;quot;mailto:nospam@thanks.com&amp;quot;&amp;gt;click to reveal (JS required)&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;for which click we will intercept, decode email address from base64 representation, update &lt;code&gt;href&lt;/code&gt; attribute and text of &lt;code&gt;a&lt;/code&gt; object, prevent default click action (it would open default mail client to the correct mail address, but we want more logical flow), and finally unbind jQuery event trigger to leave default HTML behaviour.&lt;/p&gt;
+
+&lt;h3 id=&#34;base-64:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Base 64&lt;/h3&gt;
+
+&lt;p&gt;Base64 is just binary-to-text encoding scheme for representing binary
+data in ASCII string format. For most implementations base64 uses &lt;code&gt;A-Z&lt;/code&gt;, &lt;code&gt;a-z&lt;/code&gt;, and &lt;code&gt;0-9&lt;/code&gt; for the first 62 characters, and most differences depend on the last 2.&lt;/p&gt;
+
+&lt;p&gt;Base64 encoding and decoding is available in vanilla JS using &lt;code&gt;btoa&lt;/code&gt; (for encoding &amp;ldquo;binary&amp;rdquo; string to encoded ASCII) and &lt;code&gt;btoa&lt;/code&gt; for (for decoding encoded ASCII to our original &amp;ldquo;binary&amp;rdquo; string).&lt;/p&gt;
+
+&lt;p&gt;Here we will use string encoded before to obfruscate email address from the website source code. To generate binary ASCII binary representation of our email address just run this command, e.g. in developers console:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;/** Converts binary to ASCII representation */
+btoa(&#39;your@email.address&#39;)
+
+You can test how `btoa` and `atob` works below:
+&amp;lt;label for=&amp;quot;decoded&amp;quot;&amp;gt;Decoded: &amp;lt;/label&amp;gt;&amp;lt;input type=&#39;text&#39; id=&#39;decoded&#39; /&amp;gt;
+&amp;lt;label for=&amp;quot;encoded&amp;quot;&amp;gt;Encoded: &amp;lt;/label&amp;gt;&amp;lt;input type=&#39;text&#39; id=&#39;encoded&#39; /&amp;gt;
+
+&amp;lt;script type=&#39;text/javascript&#39;&amp;gt;
+$( function () {
+  var decodedTextField = $(&amp;quot;#decoded&amp;quot;);
+  var encodedTextField = $(&amp;quot;#encoded&amp;quot;);
+
+  decodedTextFieldd.on(&#39;input&#39;, function () {
+  	encodedTextField.text(btoa(decodedTextField.text()));
+  });
+
+  encodedTextField.on(&#39;input&#39;, function () {
+  	decodedTextField.text(atob(encodedTextField.text()));
+  });
+});
+&amp;lt;/script&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Updating &lt;code&gt;a&lt;/code&gt; &lt;code&gt;href&lt;/code&gt; attribute and text&lt;/h3&gt;
+
+&lt;p&gt;We simply update attribute &lt;code&gt;href&lt;/code&gt; value with &lt;code&gt;attr&lt;/code&gt; function and &lt;code&gt;a&lt;/code&gt; tag content with &lt;code&gt;text&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;unbinding-and-preventing-default:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Unbinding and preventing default&lt;/h3&gt;
+
+&lt;p&gt;We want to disable the jQuery event trigger after first firing. To do this we apply &lt;code&gt;off(&amp;quot;click&amp;quot;)&lt;/code&gt; to disable all click triggers for given selector.&lt;/p&gt;
+
+&lt;p&gt;Also we want to prevent browser from doing the default action of opening mail client for the update &lt;code&gt;mailto&lt;/code&gt; value to give our implementation more natural look and feel (first reveal then email). We do this using &lt;code&gt;preventDefault()&lt;/code&gt; function on event &lt;code&gt;e&lt;/code&gt; passed to our function on the event trigger.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&amp;quot;a#mm&amp;quot;).click(function (e) {
+  // ...
+  $(this).off(&amp;quot;click&amp;quot;);
+  e.preventDefault();
+  // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;jquery:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;jQuery&lt;/h3&gt;
+
+&lt;p&gt;We can add our event trigger only when document is ready, which we can do by placing our little script at the end of &lt;code&gt;body&lt;/code&gt; and surrounding it with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javasript&#34;&gt;$(document).ready(function () {
+	// our implementation
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or for compactness with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(function {
+  // our implementation
+})
+
+which is equivalent to `$(document).ready(...)` method.
+
+## Final code
+
+Finally our code placed at the end of `body` looks like this (I encoded here my email address).
+
+```html
+&amp;lt;script type=&#39;text/javascript&#39;&amp;gt;
+$(function () {
+  $(&amp;quot;a#mm&amp;quot;).click(function (e) {
+    console.log(&#39;Fired&#39;);
+    var secret = function () { return atob(&#39;akBoaXJuaWFrLmluZm8=&#39;) };
+    $(this).attr(&amp;quot;href&amp;quot;, &#39;mailto:&#39; + secret());
+    $(this).text(secret());
+    $(this).off(&amp;quot;click&amp;quot;);
+    e.preventDefault();
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;demo:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;I took this demo from my [about page](&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>about</title>
