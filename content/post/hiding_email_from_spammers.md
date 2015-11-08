@@ -14,13 +14,10 @@ slug = "hiding_email_with_jquery"
 ## Requirements
 
 1. jQuery:
-
 For this tutorial we will need jQuery, which you can get from [jQuery CDN](https://code.jquery.com/). We will use the latest and minified jQuery from [https://code.jquery.com/jquery-2.1.4.min.js](https://code.jquery.com/jquery-2.1.4.min.js):
-
 ```html
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 ```
-
 2. This trick will only work on browsers with enabled JavaScript and it is estimated that [about 1% of Internet users will have not](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). So, this trick may not work for everyone. For me it is fine because of my target audience.
 
 ## The nuts and bolts
