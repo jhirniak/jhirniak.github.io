@@ -45,6 +45,7 @@ Here we will use string encoded before to obfruscate email address from the webs
 ```javascript
 /** Converts binary to ASCII representation */
 btoa('your@email.address')
+```
 
 You can test how `btoa` and `atob` works below:
 <label for="decoded">Decoded: </label><input type='text' id='decoded' />

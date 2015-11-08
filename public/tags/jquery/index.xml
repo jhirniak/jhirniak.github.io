@@ -52,39 +52,39 @@ data in ASCII string format. For most implementations base64 uses &lt;code&gt;A-
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;/** Converts binary to ASCII representation */
 btoa(&#39;your@email.address&#39;)
+&lt;/code&gt;&lt;/pre&gt;
 
-You can test how `btoa` and `atob` works below:
-&amp;lt;label for=&amp;quot;decoded&amp;quot;&amp;gt;Decoded: &amp;lt;/label&amp;gt;&amp;lt;input type=&#39;text&#39; id=&#39;decoded&#39; /&amp;gt;
-&amp;lt;label for=&amp;quot;encoded&amp;quot;&amp;gt;Encoded: &amp;lt;/label&amp;gt;&amp;lt;input type=&#39;text&#39; id=&#39;encoded&#39; /&amp;gt;
+&lt;p&gt;You can test how &lt;code&gt;btoa&lt;/code&gt; and &lt;code&gt;atob&lt;/code&gt; works below:
+&lt;label for=&#34;decoded&#34;&gt;Decoded: &lt;/label&gt;&lt;input type=&#39;text&#39; id=&#39;decoded&#39; /&gt;
+&lt;label for=&#34;encoded&#34;&gt;Encoded: &lt;/label&gt;&lt;input type=&#39;text&#39; id=&#39;encoded&#39; /&gt;&lt;/p&gt;
 
-&amp;lt;script type=&#39;text/javascript&#39;&amp;gt;
+&lt;script type=&#39;text/javascript&#39;&gt;
 $( function () {
-  var decodedTextField = $(&amp;quot;#decoded&amp;quot;);
-  var encodedTextField = $(&amp;quot;#encoded&amp;quot;);
+  var decodedTextField = $(&#34;#decoded&#34;);
+  var encodedTextField = $(&#34;#encoded&#34;);
 
   decodedTextFieldd.on(&#39;input&#39;, function () {
-  	encodedTextField.text(btoa(decodedTextField.text()));
+    encodedTextField.text(btoa(decodedTextField.text()));
   });
 
   encodedTextField.on(&#39;input&#39;, function () {
-  	decodedTextField.text(atob(encodedTextField.text()));
+    decodedTextField.text(atob(encodedTextField.text()));
   });
 });
-&amp;lt;/script&amp;gt;
+&lt;/script&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;### Updating `a` `href` attribute and text
 
-&lt;h3 id=&#34;updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Updating &lt;code&gt;a&lt;/code&gt; &lt;code&gt;href&lt;/code&gt; attribute and text&lt;/h3&gt;
+We simply update attribute `href` value with `attr` function and `a` tag content with `text`.
 
-&lt;p&gt;We simply update attribute &lt;code&gt;href&lt;/code&gt; value with &lt;code&gt;attr&lt;/code&gt; function and &lt;code&gt;a&lt;/code&gt; tag content with &lt;code&gt;text&lt;/code&gt;.&lt;/p&gt;
+### Unbinding and preventing default
 
-&lt;h3 id=&#34;unbinding-and-preventing-default:a8dbd5823328f76daa5b24981e9dc3b5&#34;&gt;Unbinding and preventing default&lt;/h3&gt;
+We want to disable the jQuery event trigger after first firing. To do this we apply `off(&amp;quot;click&amp;quot;)` to disable all click triggers for given selector.
 
-&lt;p&gt;We want to disable the jQuery event trigger after first firing. To do this we apply &lt;code&gt;off(&amp;quot;click&amp;quot;)&lt;/code&gt; to disable all click triggers for given selector.&lt;/p&gt;
+Also we want to prevent browser from doing the default action of opening mail client for the update `mailto` value to give our implementation more natural look and feel (first reveal then email). We do this using `preventDefault()` function on event `e` passed to our function on the event trigger.
 
-&lt;p&gt;Also we want to prevent browser from doing the default action of opening mail client for the update &lt;code&gt;mailto&lt;/code&gt; value to give our implementation more natural look and feel (first reveal then email). We do this using &lt;code&gt;preventDefault()&lt;/code&gt; function on event &lt;code&gt;e&lt;/code&gt; passed to our function on the event trigger.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&amp;quot;a#mm&amp;quot;).click(function (e) {
+```javascript
+$(&amp;quot;a#mm&amp;quot;).click(function (e) {
   // ...
   $(this).off(&amp;quot;click&amp;quot;);
   e.preventDefault();

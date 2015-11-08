@@ -99,39 +99,39 @@ data in ASCII string format. For most implementations base64 uses <code>A-Z</cod
 
 <pre><code class="language-javascript">/** Converts binary to ASCII representation */
 btoa('your@email.address')
+</code></pre>
 
-You can test how `btoa` and `atob` works below:
-&lt;label for=&quot;decoded&quot;&gt;Decoded: &lt;/label&gt;&lt;input type='text' id='decoded' /&gt;
-&lt;label for=&quot;encoded&quot;&gt;Encoded: &lt;/label&gt;&lt;input type='text' id='encoded' /&gt;
+<p>You can test how <code>btoa</code> and <code>atob</code> works below:
+<label for="decoded">Decoded: </label><input type='text' id='decoded' />
+<label for="encoded">Encoded: </label><input type='text' id='encoded' /></p>
 
-&lt;script type='text/javascript'&gt;
+<script type='text/javascript'>
 $( function () {
-  var decodedTextField = $(&quot;#decoded&quot;);
-  var encodedTextField = $(&quot;#encoded&quot;);
+  var decodedTextField = $("#decoded");
+  var encodedTextField = $("#encoded");
 
   decodedTextFieldd.on('input', function () {
-  	encodedTextField.text(btoa(decodedTextField.text()));
+    encodedTextField.text(btoa(decodedTextField.text()));
   });
 
   encodedTextField.on('input', function () {
-  	decodedTextField.text(atob(encodedTextField.text()));
+    decodedTextField.text(atob(encodedTextField.text()));
   });
 });
-&lt;/script&gt;
+</script>
 
-</code></pre>
+<pre><code>### Updating `a` `href` attribute and text
 
-<h3 id="updating-a-href-attribute-and-text:a8dbd5823328f76daa5b24981e9dc3b5">Updating <code>a</code> <code>href</code> attribute and text</h3>
+We simply update attribute `href` value with `attr` function and `a` tag content with `text`.
 
-<p>We simply update attribute <code>href</code> value with <code>attr</code> function and <code>a</code> tag content with <code>text</code>.</p>
+### Unbinding and preventing default
 
-<h3 id="unbinding-and-preventing-default:a8dbd5823328f76daa5b24981e9dc3b5">Unbinding and preventing default</h3>
+We want to disable the jQuery event trigger after first firing. To do this we apply `off(&quot;click&quot;)` to disable all click triggers for given selector.
 
-<p>We want to disable the jQuery event trigger after first firing. To do this we apply <code>off(&quot;click&quot;)</code> to disable all click triggers for given selector.</p>
+Also we want to prevent browser from doing the default action of opening mail client for the update `mailto` value to give our implementation more natural look and feel (first reveal then email). We do this using `preventDefault()` function on event `e` passed to our function on the event trigger.
 
-<p>Also we want to prevent browser from doing the default action of opening mail client for the update <code>mailto</code> value to give our implementation more natural look and feel (first reveal then email). We do this using <code>preventDefault()</code> function on event <code>e</code> passed to our function on the event trigger.</p>
-
-<pre><code class="language-javascript">$(&quot;a#mm&quot;).click(function (e) {
+```javascript
+$(&quot;a#mm&quot;).click(function (e) {
   // ...
   $(this).off(&quot;click&quot;);
   e.preventDefault();
