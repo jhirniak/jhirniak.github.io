@@ -4,5 +4,6 @@ draft = true
 title = "about"
 menu = "main"
 +++
-## About this blog
-blablabla
+## About me and this blog
+
+I am software developer with deep interest in distributed and parallel systems, machine learning, and big data. I created this blog to share interesting ideas and resources as well as to publish the projects and ideas that I work on.
