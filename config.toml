@@ -1,8 +1,7 @@
-baseurl = "http://blog.hirniak.com/"
+baseurl = "http://jhirniak.github.io/"
 languageCode = "en-us"
 title = "Jaroslaw Hirniak's Pirate Parrot"
 theme = "hugo-steam-theme"
-disqusShortname = "spf13"
 paginate = 10
 
 [params]
