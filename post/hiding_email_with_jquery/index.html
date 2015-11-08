@@ -202,6 +202,7 @@ btoa('your@email.address')
       e.preventDefault();
     });
     $("a#mm").text("click to reveal (JS required)");
+    $(this).attr("href", 'mailto:' + "nospam@thanks.com");
     console.log('Binded mail encode function.');
   }
 
