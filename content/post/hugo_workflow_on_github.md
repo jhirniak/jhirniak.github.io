@@ -1,7 +1,7 @@
 +++
 date = "2015-11-08T02:41:50Z"
 draft = true
-title = "Hosting Hugo on GitHub Pages: Workflow"
+title = "Hosting Hugo on GitHub Pages: Workflow1"
 Description = "Test description"
 +++
 1. [Hosting personal/organizational page in one repo]({{< relref "#hosting-personal-organizational-page-in-one-repo" >}})
