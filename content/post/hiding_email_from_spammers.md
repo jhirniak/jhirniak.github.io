@@ -11,7 +11,7 @@ slug = "hiding_email_with_jquery"
 
 +++
 
-## Requirements
+## Requirements-
 
 1. jQuery:
 For this tutorial we will need jQuery, which you can get from [jQuery CDN](https://code.jquery.com/). We will use the latest and minified jQuery from [https://code.jquery.com/jquery-2.1.4.min.js](https://code.jquery.com/jquery-2.1.4.min.js):
