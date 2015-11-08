@@ -149,7 +149,7 @@ The best way to contact me is via email <a id="mm" href="mailto:nospam@thanks.co
       $(this).off("click");
       e.preventDefault();
     });
-    $(this).text("click to reveal (JS required)");
+    $("a#mm").text("click to reveal (JS required)");
     console.log('Binded mail encode function.');
   }
 

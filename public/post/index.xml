@@ -153,7 +153,7 @@ btoa(&#39;your@email.address&#39;)
       $(this).off(&#34;click&#34;);
       e.preventDefault();
     });
-    $(this).text(&#34;click to reveal (JS required)&#34;);
+    $(&#34;a#mm&#34;).text(&#34;click to reveal (JS required)&#34;);
     console.log(&#39;Binded mail encode function.&#39;);
   }
 
