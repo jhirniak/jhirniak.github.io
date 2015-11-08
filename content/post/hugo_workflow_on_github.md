@@ -1,7 +1,7 @@
 +++
 date = "2015-11-08T02:41:50Z"
 draft = true
-title = "first"
+title = "Hosting Hugo on GitHub Pages: Workflow"
 
 +++
 ## Hosting Hugo on GitHub pages: workflow
