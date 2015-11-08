@@ -3,7 +3,7 @@ date = "2015-11-08T02:41:50Z"
 draft = true
 title = "Hosting Hugo on GitHub Pages: Workflow"
 Description = "Workflow set-up description for hosting Hugo personal/organizational and project pages on GitHub to commit and publish with just one command. Save time and improve your Hugo workflow ;)"
-tags = "test, tag, one"
+
 +++
 1. [Hosting personal/organizational page in one repo]({{< relref "#hosting-personal-organizational-page-in-one-repo" >}})
 2. [Hosting personal/organizational page in two repos]({{< relref "#hosting-personal-organizational-page-in-two-repos" >}})
