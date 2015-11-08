@@ -10,12 +10,64 @@
     <atom:link href="http://jhirniak.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>neural_nets</title>
+      <title>Neural Nets</title>
       <link>http://jhirniak.github.io/neural_nets/</link>
       <pubDate>Sun, 08 Nov 2015 02:46:58 +0000</pubDate>
       
       <guid>http://jhirniak.github.io/neural_nets/</guid>
-      <description></description>
+      <description>
+
+&lt;h2 id=&#34;resources-for-learning-about-neural-networks:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Resources for learning about Neural Networks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://karpathy.github.io/neuralnets/&#34;&gt;Andrej Karpathy: Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://karpathy.github.io/neuralnets/&#34;&gt;Andrej Karpathy: Hacker&amp;rsquo;s guide to Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/AyzOUbkUf3M&#34;&gt;Geoffrey Hinton (the father of NN) Google Tech Talk about The Next Generation of Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/file/d/0BxKBnD5y2M8NbWN6XzM5UXkwNDA/view&#34;&gt;Yann LeCun: Obstacles on the path to AI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;articles-and-motivation-for-studying-neural-networks:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Articles and motivation for studying Neural Networks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.newscientist.com/article/dn28456-im-going-to-make-facebooks-ai-predict-what-happen-in-videos/&#34;&gt;Interview with Yann Lecun: I&amp;rsquo;m going to make Facebook&amp;rsquo;s AI predict what happens in videos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://googleresearch.blogspot.co.uk/2015/11/computer-respond-to-this-email.html&#34;&gt;Computer, respond to this email. (Google prototype NN for replying to your email (demo in Google Inbox)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/1656448931234602/videos/1668490396697122/&#34;&gt;Journey and achievement of AI in Facebook. Deep from the history till the date!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/zuck/videos/10102456212502251/&#34;&gt;Helping people to see with DNs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/Engineering/videos/10153621574817200/&#34;&gt;Visual Question and Answering Demo - MemNet (natural language understanding system) combined with image recognition technology in a system called Visual Q&amp;amp;A (VQA) that answers to questions about photos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.technologyreview.com/emtech/15/&#34;&gt;EmTech 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.technologyreview.com/emtech/15/&#34;&gt;Facebook&amp;rsquo;s AI can caption photos for the blind on its own&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://uk.businessinsider.com/myths-misconceptions-about-artificial-intelligence-2015-9?r=US&amp;amp;IR=T&#34;&gt;19 A.I. experts reveal the biggest myths about robots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://phys.org/news/2015-10-human-intuition-algorithms-outperforms-teams.html&#34;&gt;System that replaces human intuition with algorithms outperforms human teams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://techcrunch.com/2015/10/13/facebooks-working-on-a-tool-to-help-the-blind-see-images/#.wqgozt:NWyq&#34;&gt;Facebook’s Working On A Tool To Help The Blind “See” Images&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;convnets:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;ConvNets&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.facebook.com/posts/1478523512478471/teaching-machines-to-see-and-understand-advances-in-ai-research/&#34;&gt;Teaching machines to see and understand: Advances in AI research
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;convnets-1:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;ConvNets&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs.stanford.edu/people/karpathy/convnetjs/&#34;&gt;Andrej Karpathy: ConvNetJS - Deep Learning in your browser&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Tools&lt;/h2&gt;
+
+&lt;h3 id=&#34;torch:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Torch&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/twitter/torch-autograd&#34;&gt;Torch Autograd by Twitter for automatically differentiating native Torch code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;cool-projects:0b0498fb8c0302fbae03ec1da4dd212b&#34;&gt;Cool projects&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/google/deepdream/blob/master/dream.ipynb&#34;&gt;Deep Dreams (with Caffe) - neural network that produces &amp;ldquo;dream&amp;rdquo; visuals&lt;/a&gt; &lt;a href=&#34;http://googleresearch.blogspot.ch/2015/06/inceptionism-going-deeper-into-neural.html&#34;&gt;show here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
