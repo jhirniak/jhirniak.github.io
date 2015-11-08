@@ -154,15 +154,15 @@ $( function () {
 <pre><code class="language-javascript">$(function {
   // our implementation
 })
+</code></pre>
 
-which is equivalent to `$(document).ready(...)` method.
+<p>which is equivalent to <code>$(document).ready(...)</code> method.</p>
 
-## Final code
+<h2 id="final-code:a8dbd5823328f76daa5b24981e9dc3b5">Final code</h2>
 
-Finally our code placed at the end of `body` looks like this (I encoded here my email address).
+<p>Finally our code placed at the end of <code>body</code> looks like this (I encoded here my email address).</p>
 
-```html
-&lt;script type='text/javascript'&gt;
+<pre><code class="language-html">&lt;script type='text/javascript'&gt;
 $(function () {
   $(&quot;a#mm&quot;).click(function (e) {
     console.log('Fired');

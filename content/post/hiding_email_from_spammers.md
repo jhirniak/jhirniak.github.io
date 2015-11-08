@@ -101,6 +101,7 @@ or for compactness with
 $(function {
   // our implementation
 })
+```
 
 which is equivalent to `$(document).ready(...)` method.
 
