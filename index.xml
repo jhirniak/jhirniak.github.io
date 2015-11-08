@@ -6,21 +6,69 @@
     <description>Recent content on Jaroslaw Hirniak&#39;s Pirate Parrot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2015 17:08:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2015 02:41:50 +0000</lastBuildDate>
     <atom:link href="http://jhirniak.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>first</title>
-      <link>http://jhirniak.github.io/post/first/</link>
-      <pubDate>Tue, 03 Nov 2015 17:08:50 +0000</pubDate>
+      <link>http://jhirniak.github.io/post/hugo_workflow_on_github/</link>
+      <pubDate>Sun, 08 Nov 2015 02:41:50 +0000</pubDate>
       
-      <guid>http://jhirniak.github.io/post/first/</guid>
+      <guid>http://jhirniak.github.io/post/hugo_workflow_on_github/</guid>
       <description>
 
-&lt;h2 id=&#34;first-post:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;First post&lt;/h2&gt;
+&lt;h2 id=&#34;hosting-hugo-on-github-pages-workflow:55e98266337c51f1413d03075e44f733&#34;&gt;Hosting Hugo on GitHub pages: workflow&lt;/h2&gt;
 
-&lt;p&gt;Hello, World!
-Hello!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
+git checkout code
+echo &amp;quot;# README&amp;quot; &amp;gt;&amp;gt; README.md
+git add .
+git commit -m &#39;Initial commit&#39;
+git remote add origin git@github.com:username/username.github.io git
+git push -u origin code
+git checkout --orphan master
+git rm --cached $(git ls-files)
+git checkout code README.md
+git add
+git commit -m &amp;quot;INIT: initial commit on master branch&amp;quot;
+git push origin master
+git checkout code
+# Create Hugo website or copy existing files for Hugo website
+rm -rf public/
+git subtree add --prefix=public git@github.com:username/username.github.io.git master --squash
+git subtree pull --prefix=public git@github.com:username/username.github.io.git master --squash # to avoid merge conflicts
+hugo # with any parameters you may need, as -b=http://www.username.github.io --theme=your_theme_name --buildDrafts -d=public/ -v
+git add -A .
+git commit -m &#39;Website update&#39;
+git push origin code
+git subtree push --prefix=public git@github.com:username/username.github.io.git master --squash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;deploy-sh:55e98266337c51f1413d03075e44f733&#34;&gt;Deploy.sh&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+
+# Build the project.
+# hugo -t hugo-steam-theme
+hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
+
+# Add changes to git.
+git add -A
+
+# Commit changes.
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push source and build repos.
+git push origin code
+git subtree push --prefix=public git@github.com:jhirniak/jhirniak.github.io.git master
+
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
