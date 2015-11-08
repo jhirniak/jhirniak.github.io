@@ -172,7 +172,7 @@ $(function () {
   var decodedTextField = $("#decoded");
   var encodedTextField = $("#encoded");
 
-  decodedTextFieldd.on('input', function () {
+  decodedTextField.on('input', function () {
     alert('typed');
     encodedTextField.text(btoa(decodedTextField.text()));
   });
