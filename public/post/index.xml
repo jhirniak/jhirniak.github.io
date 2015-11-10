@@ -6,8 +6,28 @@
     <description>Recent content in Posts on Jaroslaw Hirniak&#39;s Pirate Parrot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2015 17:02:41 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2015 10:40:17 +0000</lastBuildDate>
     <atom:link href="http://jhirniak.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>tensor_flow</title>
+      <link>http://jhirniak.github.io/post/tensor_flow/</link>
+      <pubDate>Tue, 10 Nov 2015 10:40:17 +0000</pubDate>
+      
+      <guid>http://jhirniak.github.io/post/tensor_flow/</guid>
+      <description>&lt;p&gt;Google just open-sourced its Machine Learning library under Apache 2.0. If you wonder what TensorFlow is then it is the tool behind automatic labelling of items in YouTube videos and photos, improving speech recognition in Google apps (e.g. when it is noisy), and used across different products such as Google Calendar events creation based on email (e.g. itinerary from ticket receipts), or even the &lt;a href=&#34;http://googleresearch.blogspot.co.uk/2015/11/computer-respond-to-this-email.html&#34;&gt;automatic email reply prototype&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Even the name is great, tensors are your best friend in ML, if they flow, and the flow scales, its hard to make you happier. +1 for Google for sharing TensorFlow.&lt;/p&gt;
+
+&lt;p&gt;Articles:
+* &lt;a href=&#34;https://googleblog.blogspot.co.uk/2015/11/tensorflow-smarter-machine-learning-for.html&#34;&gt;TensorFlow open-sourcing on Google Blog&lt;/a&gt;
+* &lt;a href=&#34;http://googleresearch.blogspot.co.uk/2015/11/tensorflow-googles-latest-machine_9.html&#34;&gt;Google Research blog reveal&lt;/a&gt;
+* &lt;a href=&#34;https://www.youtube.com/watch?v=90-S1M7Ny_o&amp;amp;t=21m2s&#34;&gt;Keynotes &amp;lsquo;15 on TensorFlow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.tensorflow.org/&#34;&gt;TensorFlow projet website&lt;/a&gt;
+&lt;a href=&#34;https://github.com/tensorflow/tensorflow&#34;&gt;TensorFlow source code on GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hiding your email address from spammers using jQuery</title>
