@@ -10,11 +10,11 @@
     <atom:link href="http://jhirniak.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>tensor_flow</title>
-      <link>http://jhirniak.github.io/post/tensor_flow/</link>
+      <title>Google open-sources TensorFlow Machine Learning software library</title>
+      <link>http://jhirniak.github.io/post/tensor_flow_reveal/</link>
       <pubDate>Tue, 10 Nov 2015 10:40:17 +0000</pubDate>
       
-      <guid>http://jhirniak.github.io/post/tensor_flow/</guid>
+      <guid>http://jhirniak.github.io/post/tensor_flow_reveal/</guid>
       <description>&lt;p&gt;Google just open-sourced its Machine Learning library under Apache 2.0. If you wonder what TensorFlow is then it is the tool behind automatic labelling of items in YouTube videos and photos, improving speech recognition in Google apps (e.g. when it is noisy), and used across different products such as Google Calendar events creation based on email (e.g. itinerary from ticket receipts), or even the &lt;a href=&#34;http://googleresearch.blogspot.co.uk/2015/11/computer-respond-to-this-email.html&#34;&gt;automatic email reply prototype&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Even the name is great, tensors are your best friend in ML, if they flow, and the flow scales, its hard to make you happier. +1 for Google for sharing TensorFlow.&lt;/p&gt;
