@@ -17,9 +17,10 @@ Google just open-sourced its Machine Learning library under Apache 2.0. If you w
 Even the name is great, tensors are your best friend in ML, if they flow, and the flow scales, its hard to make you happier. +1 for Google for sharing TensorFlow.
 
 Articles:
-* [TensorFlow open-sourcing on Google Blog](https://googleblog.blogspot.co.uk/2015/11/tensorflow-smarter-machine-learning-for.html)
-* [Google Research blog reveal](http://googleresearch.blogspot.co.uk/2015/11/tensorflow-googles-latest-machine_9.html)
-* [Keynotes '15 on TensorFlow](https://www.youtube.com/watch?v=90-S1M7Ny_o&t=21m2s)
+
+  * [TensorFlow open-sourcing on Google Blog](https://googleblog.blogspot.co.uk/2015/11/tensorflow-smarter-machine-learning-for.html)
+  * [Google Research blog reveal](http://googleresearch.blogspot.co.uk/2015/11/tensorflow-googles-latest-machine_9.html)
+  * [Keynotes '15 on TensorFlow](https://www.youtube.com/watch?v=90-S1M7Ny_o&t=21m2s)
 
 [TensorFlow projet website](http://www.tensorflow.org/)
 [TensorFlow source code on GitHub](https://github.com/tensorflow/tensorflow)
