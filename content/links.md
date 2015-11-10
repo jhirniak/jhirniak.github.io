@@ -6,4 +6,4 @@ menu = "main"
 
 ## Bash
 
-[http://misc.flogisoft.com/bash/tip_colors_and_formatting](Bash tips: Colors and formatting (ANSI/VT100 Control sequences))
+[Bash tips: Colors and formatting (ANSI/VT100 Control sequences)](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
