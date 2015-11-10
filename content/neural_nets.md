@@ -9,6 +9,7 @@ menu = "main"
 Here I list everything interesting that I encountered on my journey of learning neural nets, for my reference, and for anyone who could find such a list useful in their own learning ;).
 
 ## Courses
+
 * CS231n: Convolutional Neural Networks for Visual Recognition at Stanford
   * [Course website](http://cs231n.stanford.edu/)
   * [GitHub](http://cs231n.github.io/)
@@ -27,6 +28,7 @@ Here I list everything interesting that I encountered on my journey of learning 
 * [What is the class of this image? Article comparing the current state of the cart algorithms in object classification.](http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html)
 
 ## Articles and motivation for studying Neural Networks
+
 * [Interview with Yann Lecun: I'm going to make Facebook's AI predict what happens in videos](https://www.newscientist.com/article/dn28456-im-going-to-make-facebooks-ai-predict-what-happen-in-videos/)
 * [Computer, respond to this email. (Google prototype NN for replying to your email (demo in Google Inbox)](http://googleresearch.blogspot.co.uk/2015/11/computer-respond-to-this-email.html)
 * [Journey and achievement of AI in Facebook. Deep from the history till the date!](https://www.facebook.com/1656448931234602/videos/1668490396697122/)
@@ -66,11 +68,13 @@ Here I list everything interesting that I encountered on my journey of learning 
 * [Deep Learning Tutorial 0.1. LISA lab.](http://deeplearning.net/tutorial/deeplearning.pdf)
 
 ### Books
+
 * [L. Deng and D. Yu. Deep Learning - Methods and Applications.](http://research.microsoft.com/pubs/209355/DeepLearning-NowPublishing-Vol7-SIG-039.pdf)
 
 ## Deep Belief Networks
 
 ### Slides
+
 * [Deep Belief Networks by U. Arshad and Arrayfire](http://on-demand.gputechconf.com/gtc/2015/presentation/S5722-Umar-Arshad.pdf)
 
 ## Deep-Structured Learning
@@ -96,6 +100,7 @@ Here I list everything interesting that I encountered on my journey of learning 
 * [Misha Denil's projects](http://mdenil.com/projects/)
 
 ## Proceedings
+
 * [NIPS 2012](http://papers.nips.cc/book/advances-in-neural-information-processing-systems-25-2012)
 
 ## Tools
@@ -142,8 +147,8 @@ th
 
 #### Advanced
 
-* [Torch Autograd by Twitter for automatically differentiating native Torch code](https://github.com/twitter/torch-autograd)
-* [Autograd for Torch by Twitter.](https://blog.twitter.com/2015/autograd-for-torch)
+  * [Torch Autograd by Twitter for automatically differentiating native Torch code](https://github.com/twitter/torch-autograd)
+  * [Autograd for Torch by Twitter.](https://blog.twitter.com/2015/autograd-for-torch)
 
 ### TensorFlow
 
@@ -158,6 +163,7 @@ Articles:
   * [Keynotes '15 on TensorFlow](https://www.youtube.com/watch?v=90-S1M7Ny_o&t=21m2s)
 
 [TensorFlow projet website](http://www.tensorflow.org/)
+
 [TensorFlow source code on GitHub](https://github.com/tensorflow/tensorflow)
 
 ## Cool projects
