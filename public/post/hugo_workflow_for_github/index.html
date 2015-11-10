@@ -127,10 +127,13 @@ git subtree push --prefix=public git@github.com:username/username.github.io.git 
 
 <p>To automate the above process of commiting to code branch, generating Hugo static pages, and pushing them to <code>master</code> branch we will create <code>deploy.sh</code> script. Remember, to update <code>&lt;your-username&gt;</code>, <your-project>, and if you used different prefix <code>--prefix</code> in the script. Finally, make the script executable with <code>chmod +x deploy.sh</code> and commit it to the repo. To use the script you just need to type <code>./deploy.sh &lt;commit-message&gt;</code>. If you leave <code>&lt;commit-message&gt;</code> empty then <code>rebuilding site &lt;current-date&gt;</code> will be used instead.</p>
 
-<p>We format the terminal output with escape codes. Paremeter <code>-e</code> escapes the text before printing it to the terminal. Here
-* <code>\e[1m</code> makes text bold,
-* <code>\e[7m</code> reverse colors (will result with black on green background, if your terminal background is black),
-* <code>\e[32m</code> make text color green.</p>
+<p>We format the terminal output with escape codes. Paremeter <code>-e</code> escapes the text before printing it to the terminal. Here</p>
+
+<ul>
+<li><code>\e[1m</code> makes text bold,</li>
+<li><code>\e[7m</code> reverse colors (will result with black on green background, if your terminal background is black),</li>
+<li><code>\e[32m</code> make text color green.</li>
+</ul>
 
 <p>You can read more about bash colors and formatting escape codes <a href="http://misc.flogisoft.com/bash/tip_colors_and_formatting">Flozz&rsquo;s website</a>.</p>
 
@@ -193,10 +196,13 @@ git subtree push --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-u
 
 <p>Remember, to update <code>&lt;your-username&gt;</code>, <your-project>, and if you used different prefix <code>--prefix</code> in the script. Finally, make the script executable with <code>chmod +x deploy.sh</code> and commit it to the repo. To use the script you just need to type <code>./deploy.sh &lt;commit-message&gt;</code>. If you leave <code>&lt;commit-message&gt;</code> empty then <code>rebuilding site &lt;current-date&gt;</code> will be used instead.</p>
 
-<p>We format the terminal output with escape codes. Paremeter <code>-e</code> escapes the text before printing it to the terminal. Here
-* <code>\e[1m</code> makes text bold,
-* <code>\e[7m</code> reverse colors (will result with black on green background, if your terminal background is black),
-* <code>\e[32m</code> make text color green.</p>
+<p>We format the terminal output with escape codes. Paremeter <code>-e</code> escapes the text before printing it to the terminal. Here</p>
+
+<ul>
+<li><code>\e[1m</code> makes text bold,</li>
+<li><code>\e[7m</code> reverse colors (will result with black on green background, if your terminal background is black),</li>
+<li><code>\e[32m</code> make text color green.</li>
+</ul>
 
 <p>You can read more about bash colors and formatting escape codes <a href="http://misc.flogisoft.com/bash/tip_colors_and_formatting">Flozz&rsquo;s website</a>.</p>
 
@@ -303,10 +309,13 @@ git subtree push --prefix=public git@github.com:&lt;your-username&gt;/&lt;your-p
 
 <p>To automate the whole process add the below <code>deploy.sh</code> script. Remember, to update <code>&lt;your-username&gt;</code>, <your-project>, and if you used different prefix <code>--prefix</code> in the script. Finally, make the script executable with <code>chmod +x deploy.sh</code> and commit it to the repo. To use the script you just need to type <code>./deploy.sh &lt;commit-message&gt;</code>. If you leave <code>&lt;commit-message&gt;</code> empty then <code>rebuilding site &lt;current-date&gt;</code> will be used instead.</p>
 
-<p>We format the terminal output with escape codes. Paremeter <code>-e</code> escapes the text before printing it to the terminal. Here
-* <code>\e[1m</code> makes text bold,
-* <code>\e[7m</code> reverse colors (will result with black on green background, if your terminal background is black),
-* <code>\e[32m</code> make text color green.</p>
+<p>We format the terminal output with escape codes. Paremeter <code>-e</code> escapes the text before printing it to the terminal. Here</p>
+
+<ul>
+<li><code>\e[1m</code> makes text bold,</li>
+<li><code>\e[7m</code> reverse colors (will result with black on green background, if your terminal background is black),</li>
+<li><code>\e[32m</code> make text color green.</li>
+</ul>
 
 <p>You can read more about bash colors and formatting escape codes <a href="http://misc.flogisoft.com/bash/tip_colors_and_formatting">Flozz&rsquo;s website</a>.</p>
 

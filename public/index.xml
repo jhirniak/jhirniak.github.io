@@ -522,10 +522,13 @@ git subtree push --prefix=public git@github.com:username/username.github.io.git 
 
 &lt;p&gt;To automate the above process of commiting to code branch, generating Hugo static pages, and pushing them to &lt;code&gt;master&lt;/code&gt; branch we will create &lt;code&gt;deploy.sh&lt;/code&gt; script. Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
 
-&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here
-* &lt;code&gt;\e[1m&lt;/code&gt; makes text bold,
-* &lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),
-* &lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/p&gt;
+&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\e[1m&lt;/code&gt; makes text bold,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;You can read more about bash colors and formatting escape codes &lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Flozz&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
 
@@ -588,10 +591,13 @@ git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&a
 
 &lt;p&gt;Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
 
-&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here
-* &lt;code&gt;\e[1m&lt;/code&gt; makes text bold,
-* &lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),
-* &lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/p&gt;
+&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\e[1m&lt;/code&gt; makes text bold,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;You can read more about bash colors and formatting escape codes &lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Flozz&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
 
@@ -698,10 +704,13 @@ git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&a
 
 &lt;p&gt;To automate the whole process add the below &lt;code&gt;deploy.sh&lt;/code&gt; script. Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
 
-&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here
-* &lt;code&gt;\e[1m&lt;/code&gt; makes text bold,
-* &lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),
-* &lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/p&gt;
+&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\e[1m&lt;/code&gt; makes text bold,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;You can read more about bash colors and formatting escape codes &lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Flozz&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
 
