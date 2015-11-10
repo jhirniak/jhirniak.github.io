@@ -233,9 +233,14 @@ git subtree push --prefix=public git@github.com:username/username.github.io.git 
 
 &lt;p&gt;To automate the above process of commiting to code branch, generating Hugo static pages, and pushing them to &lt;code&gt;master&lt;/code&gt; branch we will create &lt;code&gt;deploy.sh&lt;/code&gt; script. Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here
+* &lt;code&gt;\e[1m&lt;/code&gt; makes text bold,
+* &lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),
+* &lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/p&gt;
 
-echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
+&lt;p&gt;You can read more about bash colors and formatting escape codes &lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Flozz&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
 # Build the project
 # You may need to use some of the below options:
@@ -245,9 +250,12 @@ echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
 #   * -d=&amp;lt;static-pages-dir&amp;gt;
 #   * -v   # verbose
 #
-# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
-hugo 
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme -d=public/ -v
+echo -e &amp;quot;\e[1m\e[7m\e[32mBuilding the project...\e[0m&amp;quot;
+hugo
 
+# Add changes to git.
+echo -e &amp;quot;\e[1m\e[7m\e[32mCommitting updates to code branch...\e[0m&amp;quot;
 git add -A
 
 # Commit changes.
@@ -259,6 +267,9 @@ git commit -m &amp;quot;$msg&amp;quot;
 
 # Push source and build repos.
 git push origin code
+
+echo -e &amp;quot;\e[1m\e[7m\e[32mPushing the changes to master branch...\e[0m&amp;quot;
+echo -e &amp;quot;\e[1m\e[7m\e[32mUpdating the website...\e[0m&amp;quot;
 # Example:
 # git subtree push --prefix=public git@github.com:jhirniak/jhirniak.github.io.git master
 git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&amp;lt;your-username&amp;gt;.github.io.git master
@@ -290,8 +301,6 @@ git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&a
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
-echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
-
 # Build the project
 # You may need to use some of the below options:
 #   * -b=http://&amp;lt;your-username&amp;gt;.github.io/&amp;lt;your-project&amp;gt;
@@ -300,11 +309,17 @@ echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
 #   * -d=&amp;lt;static-pages-dir&amp;gt;
 #   * -v   # verbose
 #
-# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
-hugo 
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme -d=public/ -v
+echo -e &amp;quot;\e[1m\e[7m\e[32mBuilding the project...\e[0m&amp;quot;
+hugo
 
 cd public    # Go To Public folder
 git add -A   # Add changes to git.
+
+# Add changes to git.
+echo -e &amp;quot;\e[1m\e[7m\e[32mPushing updates to master branch of &amp;lt;username&amp;gt;.github.io...\e[0m&amp;quot;
+echo -e &amp;quot;\e[1m\e[7m\e[32mUpdating the website...\e[0m&amp;quot;
+git add -A
 
 # Commit changes.
 msg=&amp;quot;rebuilding site `date`&amp;quot;
@@ -389,8 +404,6 @@ git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&a
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 
-echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
-
 # Build the project
 # You may need to use some of the below options:
 #   * -b=http://&amp;lt;your-username&amp;gt;.github.io/&amp;lt;your-project&amp;gt;
@@ -398,8 +411,13 @@ echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot;
 #   * --buildDrafts   # include drafts
 #   * -d=&amp;lt;static-pages-dir&amp;gt;
 #   * -v   # verbose
-hugo 
+#
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme -d=public/ -v
+echo -e &amp;quot;\e[1m\e[7m\e[32mBuilding the project...\e[0m&amp;quot;
+hugo
 
+# Add changes to git.
+echo -e &amp;quot;\e[1m\e[7m\e[32mCommitting updates to code branch...\e[0m&amp;quot;
 git add -A
 
 # Commit changes.
@@ -409,8 +427,14 @@ if [ $# -eq 1 ]
 fi
 git commit -m &amp;quot;$msg&amp;quot;
 
-# Push source and build repos.
+# Push to master.
 git push origin master
+
+# Update website gh-pages branch from generate files.
+echo -e &amp;quot;\e[1m\e[7m\e[32mPushing the changes to master branch...\e[0m&amp;quot;
+echo -e &amp;quot;\e[1m\e[7m\e[32mUpdating the website...\e[0m&amp;quot;
+# Example:
+# git subtree push --prefix=public git@github.com:jhirniak/amaze.git gh-pages
 git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&amp;lt;your-project&amp;gt;.git gh-pages
 &lt;/code&gt;&lt;/pre&gt;
 </description>
