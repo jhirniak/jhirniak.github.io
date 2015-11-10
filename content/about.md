@@ -1,6 +1,6 @@
 +++
 date = "2015-11-08T15:08:06Z"
-title = "about"
+title = "About"
 menu = "main"
 +++
 

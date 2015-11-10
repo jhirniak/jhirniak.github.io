@@ -1,7 +1,6 @@
 +++
 date = "2015-11-10T09:49:04Z"
-title = "links"
-Name = "Links"
+title = "Links"
 menu = "main"
 +++
 
