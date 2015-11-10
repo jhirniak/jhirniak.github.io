@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>http://jhirniak.github.io/post/hiding_email_with_jquery/</loc>
+    <lastmod>2015-11-08T17:02:41+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jhirniak.github.io/about/</loc>
     <lastmod>2015-11-08T15:08:06+00:00</lastmod>
   </url>
@@ -20,6 +25,11 @@
   <url>
     <loc>http://jhirniak.github.io/neural_nets/</loc>
     <lastmod>2015-11-08T02:46:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jhirniak.github.io/post/hugo_workflow_for_github/</loc>
+    <lastmod>2015-11-08T02:41:50+00:00</lastmod>
   </url>
   
 </urlset>
