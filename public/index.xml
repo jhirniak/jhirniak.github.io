@@ -6,8 +6,22 @@
     <description>Recent content on Jaroslaw Hirniak&#39;s Pirate Parrot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2015 17:02:41 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2015 09:49:04 +0000</lastBuildDate>
     <atom:link href="http://jhirniak.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>links</title>
+      <link>http://jhirniak.github.io/links/</link>
+      <pubDate>Tue, 10 Nov 2015 09:49:04 +0000</pubDate>
+      
+      <guid>http://jhirniak.github.io/links/</guid>
+      <description>
+
+&lt;h2 id=&#34;bash:424069113a08a4256349764ee38dbbbf&#34;&gt;Bash&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;Bash tips: Colors and formatting (ANSI/VT100 Control sequences&#34;&gt;http://misc.flogisoft.com/bash/tip_colors_and_formatting&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hiding your email address from spammers using jQuery</title>
