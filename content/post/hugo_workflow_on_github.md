@@ -67,8 +67,6 @@ To automate the above process of commiting to code branch, generating Hugo stati
 ```bash
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
 # Build the project
 # You may need to use some of the below options:
 #   * -b=http://<your-username>.github.io/<your-project>
@@ -77,9 +75,12 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 #   * -d=<static-pages-dir>
 #   * -v   # verbose
 #
-# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
-hugo 
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme -d=public/ -v
+echo -e "\e[1m\e[7m\e[32mBuilding the project...\e[0m"
+hugo
 
+# Add changes to git.
+echo -e "\e[1m\e[7m\e[32mCommitting updates to code branch...\e[0m"
 git add -A
 
 # Commit changes.
@@ -91,6 +92,9 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin code
+
+echo -e "\e[1m\e[7m\e[32mPushing the changes to master branch...\e[0m"
+echo -e "\e[1m\e[7m\e[32mUpdating the website...\e[0m"
 # Example:
 # git subtree push --prefix=public git@github.com:jhirniak/jhirniak.github.io.git master
 git subtree push --prefix=public git@github.com:<your-username>/<your-username>.github.io.git master
@@ -118,8 +122,6 @@ Remember, to update `<your-username>`, <your-project>, and if you used different
 ```bash
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
 # Build the project
 # You may need to use some of the below options:
 #   * -b=http://<your-username>.github.io/<your-project>
@@ -128,11 +130,17 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 #   * -d=<static-pages-dir>
 #   * -v   # verbose
 #
-# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme --buildDrafts -d=public/ -v
-hugo 
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme -d=public/ -v
+echo -e "\e[1m\e[7m\e[32mBuilding the project...\e[0m"
+hugo
 
 cd public    # Go To Public folder
 git add -A   # Add changes to git.
+
+# Add changes to git.
+echo -e "\e[1m\e[7m\e[32mPushing updates to master branch of <username>.github.io...\e[0m"
+echo -e "\e[1m\e[7m\e[32mUpdating the website...\e[0m"
+git add -A
 
 # Commit changes.
 msg="rebuilding site `date`"
@@ -216,8 +224,6 @@ To automate the whole process add the below `deploy.sh` script. Remember, to upd
 ```bash
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-
 # Build the project
 # You may need to use some of the below options:
 #   * -b=http://<your-username>.github.io/<your-project>
@@ -225,8 +231,13 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 #   * --buildDrafts   # include drafts
 #   * -d=<static-pages-dir>
 #   * -v   # verbose
-hugo 
+#
+# Example: hugo -b=http://jhirniak.github.io/ --theme=hugo-steam-theme -d=public/ -v
+echo -e "\e[1m\e[7m\e[32mBuilding the project...\e[0m"
+hugo
 
+# Add changes to git.
+echo -e "\e[1m\e[7m\e[32mCommitting updates to code branch...\e[0m"
 git add -A
 
 # Commit changes.
@@ -236,7 +247,13 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 
-# Push source and build repos.
+# Push to master.
 git push origin master
+
+# Update website gh-pages branch from generate files.
+echo -e "\e[1m\e[7m\e[32mPushing the changes to master branch...\e[0m"
+echo -e "\e[1m\e[7m\e[32mUpdating the website...\e[0m"
+# Example:
+# git subtree push --prefix=public git@github.com:jhirniak/amaze.git gh-pages
 git subtree push --prefix=public git@github.com:<your-username>/<your-project>.git gh-pages
 ```
