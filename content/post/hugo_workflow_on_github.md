@@ -126,6 +126,13 @@ git submodule add git@github.com:<username>/<username>.github.io.git public
 
 Remember, to update `<your-username>`, <your-project>, and if you used different prefix `--prefix` in the script. Finally, make the script executable with `chmod +x deploy.sh` and commit it to the repo. To use the script you just need to type `./deploy.sh <commit-message>`. If you leave `<commit-message>` empty then `rebuilding site <current-date>` will be used instead.
 
+We format the terminal output with escape codes. Paremeter `-e` escapes the text before printing it to the terminal. Here
+* `\e[1m` makes text bold,
+* `\e[7m` reverse colors (will result with black on green background, if your terminal background is black),
+* `\e[32m` make text color green.
+
+You can read more about bash colors and formatting escape codes [Flozz's website](http://misc.flogisoft.com/bash/tip_colors_and_formatting).
+
 ```bash
 #!/bin/bash
 
@@ -227,6 +234,13 @@ git subtree push --prefix=public git@github.com:<your-username>/<your-project>.g
 ### Deploy.sh
 
 To automate the whole process add the below `deploy.sh` script. Remember, to update `<your-username>`, <your-project>, and if you used different prefix `--prefix` in the script. Finally, make the script executable with `chmod +x deploy.sh` and commit it to the repo. To use the script you just need to type `./deploy.sh <commit-message>`. If you leave `<commit-message>` empty then `rebuilding site <current-date>` will be used instead.
+
+We format the terminal output with escape codes. Paremeter `-e` escapes the text before printing it to the terminal. Here
+* `\e[1m` makes text bold,
+* `\e[7m` reverse colors (will result with black on green background, if your terminal background is black),
+* `\e[32m` make text color green.
+
+You can read more about bash colors and formatting escape codes [Flozz's website](http://misc.flogisoft.com/bash/tip_colors_and_formatting).
 
 ```bash
 #!/bin/bash
