@@ -13,3 +13,7 @@ menu = "main"
 [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html)
 [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 [VIM starting point](http://thomer.com/vi/vi.html)
+
+## Brain-stuff
+
+[On being smart](http://sma.epfl.ch/~moustafa/General/onbeingsmart.pdf)
