@@ -166,6 +166,8 @@ Articles:
 
 [TensorFlow source code on GitHub](https://github.com/tensorflow/tensorflow)
 
+[TensorFlow benchmarks](https://github.com/soumith/convnet-benchmarks/issues/66)
+
 ## Cool projects
 
 * [Deep Dreams (with Caffe) - neural network that produces "dream" visuals](https://github.com/google/deepdream/blob/master/dream.ipynb) [show here](http://googleresearch.blogspot.ch/2015/06/inceptionism-going-deeper-into-neural.html)
