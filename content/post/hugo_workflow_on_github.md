@@ -10,8 +10,6 @@ slug = "hugo_workflow_for_github"
 
 +++
 
-<script type="text/javascript" src="https://asciinema.org/a/14.js"></script>
-
 1. [Hosting personal/organizational page in one repo]({{< relref "#hosting-personal-organizational-page-in-one-repo" >}})
 2. [Hosting personal/organizational page in two repos]({{< relref "#hosting-personal-organizational-page-in-two-repos" >}})
 3. [Hosting project page]({{< relref "#hosting-project-page" >}})
@@ -286,4 +284,4 @@ git subtree push --prefix=public git@github.com:<your-username>/<your-project>.g
 
 ## Deploy.sh demo
 
-<a href="{{ .Page.Site.BaseUrl }}/static/deploy.anema"><img src="https://asciinema.org/a/14.png" width="836"/></a>
+[![asciicast](https://asciinema.org/a/1rj3519q3hg57vrdwkozyk8cw.png)](https://asciinema.org/a/1rj3519q3hg57vrdwkozyk8cw)
