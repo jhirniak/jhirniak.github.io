@@ -286,4 +286,4 @@ git subtree push --prefix=public git@github.com:<your-username>/<your-project>.g
 
 ## Deploy.sh demo
 
-[![asciicast](https://asciinema.org/a/14.png)](static/terminal-deploy)
+[![asciicast](https://asciinema.org/a/14.png)](static/static/deploy.anema)
