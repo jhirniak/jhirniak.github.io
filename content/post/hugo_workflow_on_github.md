@@ -10,6 +10,8 @@ slug = "hugo_workflow_for_github"
 
 +++
 
+<script type="text/javascript" src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>
+
 1. [Hosting personal/organizational page in one repo]({{< relref "#hosting-personal-organizational-page-in-one-repo" >}})
 2. [Hosting personal/organizational page in two repos]({{< relref "#hosting-personal-organizational-page-in-two-repos" >}})
 3. [Hosting project page]({{< relref "#hosting-project-page" >}})
@@ -281,3 +283,7 @@ echo -e "\e[1m\e[7m\e[32mUpdating the website...\e[0m"
 # git subtree push --prefix=public git@github.com:jhirniak/amaze.git gh-pages
 git subtree push --prefix=public git@github.com:<your-username>/<your-project>.git gh-pages
 ```
+
+## Deploy.sh demo
+
+[![asciicast](https://asciinema.org/a/14.png)](static/terminal-deploy)
