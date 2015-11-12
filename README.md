@@ -1,1 +1,1 @@
-# jhirniak.github.io personal blog
+# jhirniak.github.io - Jaroslaw Hirniak's personal blog

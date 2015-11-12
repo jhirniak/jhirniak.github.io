@@ -1,7 +1,9 @@
 +++
+
 date = "2015-11-08T15:08:06Z"
 title = "About"
 menu = "main"
+
 +++
 
 I am software developer with deep interest in distributed and parallel systems, machine learning, and big data. I created this blog to share interesting ideas and resources as well as to publish the projects and ideas that I work on.
