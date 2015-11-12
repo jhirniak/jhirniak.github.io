@@ -198,7 +198,7 @@ btoa(&#39;your@email.address&#39;)
       <guid>http://jhirniak.github.io/post/hugo_workflow_for_github/</guid>
       <description>
 
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://asciinema.org/a/14.js&#34; id=&#34;asciicast-14&#34; async&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://asciinema.org/a/14.js&#34;&gt;&lt;/script&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;#hosting-personal-organizational-page-in-one-repo:55e98266337c51f1413d03075e44f733&#34;&gt;Hosting personal/organizational page in one repo&lt;/a&gt;&lt;/li&gt;
