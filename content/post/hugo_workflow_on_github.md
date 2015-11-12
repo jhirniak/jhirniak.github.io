@@ -284,4 +284,4 @@ git subtree push --prefix=public git@github.com:<your-username>/<your-project>.g
 
 ## Deploy.sh demo
 
-<script type="text/javascript" src="https://asciinema.org/a/1rj3519q3hg57vrdwkozyk8cw.js" id="asciicast-1rj3519q3hg57vrdwkozyk8cw" async></script>
+<script type="text/javascript" src="https://asciinema.org/a/bwgxzmu8q2llzhk8mlz9n5deq.js" id="asciicast-bwgxzmu8q2llzhk8mlz9n5deq" async></script>
