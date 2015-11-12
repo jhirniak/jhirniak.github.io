@@ -10,7 +10,7 @@ slug = "hugo_workflow_for_github"
 
 +++
 
-<script type="text/javascript" src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>
+<script type="text/javascript" src="https://asciinema.org/a/14.js"></script>
 
 1. [Hosting personal/organizational page in one repo]({{< relref "#hosting-personal-organizational-page-in-one-repo" >}})
 2. [Hosting personal/organizational page in two repos]({{< relref "#hosting-personal-organizational-page-in-two-repos" >}})
