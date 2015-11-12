@@ -41,9 +41,10 @@
       <guid>http://jhirniak.github.io/links/</guid>
       <description>
 
-&lt;h2 id=&#34;bash:424069113a08a4256349764ee38dbbbf&#34;&gt;Bash&lt;/h2&gt;
+&lt;h2 id=&#34;unix-tips-tools:424069113a08a4256349764ee38dbbbf&#34;&gt;Unix: tips &amp;amp; tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Bash tips: Colors and formatting (ANSI/VT100 Control sequences)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Bash tips: Colors and formatting (ANSI/VT100 Control sequences)&lt;/a&gt;
+&lt;a href=&#34;http://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html&#34;&gt;Using make and writing Makefiles&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;ides:424069113a08a4256349764ee38dbbbf&#34;&gt;IDEs&lt;/h2&gt;
 
