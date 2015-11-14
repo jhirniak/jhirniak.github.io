@@ -1,12 +1,12 @@
 baseurl = "http://jhirniak.github.io/"
 languageCode = "en-us"
-title = "Jaroslaw Hirniak's Pirate Parrot"
+title = "Home"
 theme = "hugo-steam-theme"
 paginate = 10
 
 [params]
 
-	title = "Jaroslaw Hirniak's Blog"
+	title = "Jaroslaw Hirniak's Pirate Parrot"
 	subtitle = "Fork, amplify, and release ideas."
 	copyright = "Released under the MIT license."
 
