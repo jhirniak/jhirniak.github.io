@@ -6,8 +6,18 @@
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2015 10:40:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Feb 2016 02:46:40 +0000</lastBuildDate>
     <atom:link href="http://jhirniak.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>gh pages custom domain</title>
+      <link>http://jhirniak.github.io/post/gh-pages-custom-domain/</link>
+      <pubDate>Mon, 22 Feb 2016 02:46:40 +0000</pubDate>
+      
+      <guid>http://jhirniak.github.io/post/gh-pages-custom-domain/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&#34;&gt;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Google open-sources TensorFlow Machine Learning software library</title>
@@ -216,58 +226,59 @@ btoa(&#39;your@email.address&#39;)
 
 &lt;ol&gt;
 &lt;li&gt;Create &lt;code&gt;&amp;lt;your-username&amp;gt;.github.io&lt;/code&gt; repo. Alternatively, if you have got existing &lt;code&gt;&amp;lt;your-username&amp;gt;.github.io&lt;/code&gt; repo then make sure to checkout code to non-&lt;code&gt;master&lt;/code&gt; branch with steps described above.&lt;/li&gt;
-&lt;li&gt;If you are starting fresh initialize the repo:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
+&lt;li&gt;If you are starting fresh initialize the repo:
+&lt;code&gt;bash
+git init
 git checkout code
 echo &amp;quot;# README&amp;quot; &amp;gt;&amp;gt; README.md
 git add .
 git commit -m &#39;Initial commit&#39;
 git remote add origin git@github.com:username/username.github.io git
 git push -u origin code
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/li&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Now, the steps regardless if repo existed or not are the same. Create orphan branch (a branch that has no common history with an existing branch) called &lt;code&gt;master&lt;/code&gt;. We will synchronize its code with &lt;code&gt;public&lt;/code&gt; folder of the &lt;code&gt;code&lt;/code&gt; branch.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Now, the steps regardless if repo existed or not are the same. Create orphan branch (a branch that has no common history with an existing branch) called &lt;code&gt;master&lt;/code&gt;. We will synchronize its code with &lt;code&gt;public&lt;/code&gt; folder of the &lt;code&gt;code&lt;/code&gt; branch.
+```bash&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Set up orphan branch master
-git checkout --orphan master
-git rm --cached $(git ls-files)
+&lt;h1 id=&#34;set-up-orphan-branch-master:55e98266337c51f1413d03075e44f733&#34;&gt;Set up orphan branch master&lt;/h1&gt;
+
+&lt;p&gt;git checkout &amp;ndash;orphan master
+git rm &amp;ndash;cached $(git ls-files)
 git checkout code README.md
 git add .
-git commit -m &amp;quot;INIT: initial commit on master branch&amp;quot;
-git push origin master
+git commit -m &amp;ldquo;INIT: initial commit on master branch&amp;rdquo;
+git push origin master&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-git checkout code
+&lt;p&gt;git checkout code&lt;/p&gt;
 
-# Create Hugo website or copy existing files for Hugo website
-rm -rf public/
-git subtree add --prefix=public git@github.com:username/username.github.io.git master --squash
-git subtree pull --prefix=public git@github.com:username/username.github.io.git master --squash # to avoid merge conflicts
-hugo # with any parameters you may need, as -b=http://www.username.github.io --theme=your_theme_name --buildDrafts -d=public/ -v
+&lt;h1 id=&#34;create-hugo-website-or-copy-existing-files-for-hugo-website:55e98266337c51f1413d03075e44f733&#34;&gt;Create Hugo website or copy existing files for Hugo website&lt;/h1&gt;
+
+&lt;p&gt;rm -rf public/
+git subtree add &amp;ndash;prefix=public git@github.com:username/username.github.io.git master &amp;ndash;squash
+git subtree pull &amp;ndash;prefix=public git@github.com:username/username.github.io.git master &amp;ndash;squash # to avoid merge conflicts
+hugo # with any parameters you may need, as -b=&lt;a href=&#34;http://www.username.github.io&#34;&gt;http://www.username.github.io&lt;/a&gt; &amp;ndash;theme=your_theme_name &amp;ndash;buildDrafts -d=public/ -v
 git add -A .
-git commit -m &#39;Website update&#39;
+git commit -m &amp;lsquo;Website update&amp;rsquo;
 git push origin code
-git subtree push --prefix=public git@github.com:username/username.github.io.git master --squash
-&lt;/code&gt;&lt;/pre&gt;
+git subtree push &amp;ndash;prefix=public git@github.com:username/username.github.io.git master &amp;ndash;squash&lt;/p&gt;
 
-&lt;h3 id=&#34;deploy-sh:55e98266337c51f1413d03075e44f733&#34;&gt;Deploy.sh&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+### Deploy.sh
 
-&lt;p&gt;To automate the above process of commiting to code branch, generating Hugo static pages, and pushing them to &lt;code&gt;master&lt;/code&gt; branch we will create &lt;code&gt;deploy.sh&lt;/code&gt; script. Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
+To automate the above process of commiting to code branch, generating Hugo static pages, and pushing them to `master` branch we will create `deploy.sh` script. Remember, to update `&amp;lt;your-username&amp;gt;`, &amp;lt;your-project&amp;gt;, and if you used different prefix `--prefix` in the script. Finally, make the script executable with `chmod +x deploy.sh` and commit it to the repo. To use the script you just need to type `./deploy.sh &amp;lt;commit-message&amp;gt;`. If you leave `&amp;lt;commit-message&amp;gt;` empty then `rebuilding site &amp;lt;current-date&amp;gt;` will be used instead.
 
-&lt;p&gt;We format the terminal output with escape codes. Paremeter &lt;code&gt;-e&lt;/code&gt; escapes the text before printing it to the terminal. Here&lt;/p&gt;
+We format the terminal output with escape codes. Paremeter `-e` escapes the text before printing it to the terminal. Here
 
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\e[1m&lt;/code&gt; makes text bold,&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\e[7m&lt;/code&gt; reverse colors (will result with black on green background, if your terminal background is black),&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\e[32m&lt;/code&gt; make text color green.&lt;/li&gt;
-&lt;/ul&gt;
+  * `\e[1m` makes text bold,
+  * `\e[7m` reverse colors (will result with black on green background, if your terminal background is black),
+  * `\e[32m` make text color green.
 
-&lt;p&gt;You can read more about bash colors and formatting escape codes &lt;a href=&#34;http://misc.flogisoft.com/bash/tip_colors_and_formatting&#34;&gt;Flozz&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
+You can read more about bash colors and formatting escape codes [Flozz&#39;s website](http://misc.flogisoft.com/bash/tip_colors_and_formatting).
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+```bash
+#!/bin/bash
 
 # Build the project
 # You may need to use some of the below options:
@@ -312,17 +323,14 @@ git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&a
 &lt;li&gt;Create &lt;code&gt;code&lt;/code&gt; repository, e.g. &lt;code&gt;&amp;lt;username&amp;gt;-hugo&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Create static &lt;code&gt;website&lt;/code&gt; repository, i.e. &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;, for &lt;code&gt;public&lt;/code&gt; folder of you hugo website.&lt;/li&gt;
 &lt;li&gt;Create website at &lt;code&gt;&amp;lt;username&amp;gt;-hugo&lt;/code&gt;, test it with &lt;code&gt;hugo server --watch -t &amp;lt;yourtheme&amp;gt;&lt;/code&gt;, and once happy remove &lt;code&gt;public&lt;/code&gt; folder with &lt;code&gt;rm -rf public&lt;/code&gt; and commit changes.&lt;/li&gt;
-&lt;li&gt;Add submodule at &lt;code&gt;&amp;lt;username&amp;gt;-hugo&lt;/code&gt; repo with:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule add git@github.com:&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io.git public
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
+&lt;li&gt;Add submodule at &lt;code&gt;&amp;lt;username&amp;gt;-hugo&lt;/code&gt; repo with:
+&lt;code&gt;bash
+git submodule add git@github.com:&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io.git public
+&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Add &lt;code&gt;deploy.sh&lt;/code&gt; script and make it executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;deploy-sh-1:55e98266337c51f1413d03075e44f733&#34;&gt;Deploy.sh&lt;/h3&gt;
+&lt;h3 id=&#34;deploy-sh:55e98266337c51f1413d03075e44f733&#34;&gt;Deploy.sh&lt;/h3&gt;
 
 &lt;p&gt;Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
 
@@ -435,7 +443,7 @@ git push origin master
 git subtree push --prefix=public git@github.com:&amp;lt;your-username&amp;gt;/&amp;lt;your-project&amp;gt;.git gh-pages
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;deploy-sh-2:55e98266337c51f1413d03075e44f733&#34;&gt;Deploy.sh&lt;/h3&gt;
+&lt;h3 id=&#34;deploy-sh-1:55e98266337c51f1413d03075e44f733&#34;&gt;Deploy.sh&lt;/h3&gt;
 
 &lt;p&gt;To automate the whole process add the below &lt;code&gt;deploy.sh&lt;/code&gt; script. Remember, to update &lt;code&gt;&amp;lt;your-username&amp;gt;&lt;/code&gt;, &lt;your-project&gt;, and if you used different prefix &lt;code&gt;--prefix&lt;/code&gt; in the script. Finally, make the script executable with &lt;code&gt;chmod +x deploy.sh&lt;/code&gt; and commit it to the repo. To use the script you just need to type &lt;code&gt;./deploy.sh &amp;lt;commit-message&amp;gt;&lt;/code&gt;. If you leave &lt;code&gt;&amp;lt;commit-message&amp;gt;&lt;/code&gt; empty then &lt;code&gt;rebuilding site &amp;lt;current-date&amp;gt;&lt;/code&gt; will be used instead.&lt;/p&gt;
 
